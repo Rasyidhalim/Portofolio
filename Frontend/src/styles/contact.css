@@ -1,0 +1,68 @@
+/* ============================================================== */
+/* CONTACT SECTION & FORM STYLES                                  */
+/* ============================================================== */
+
+.contact-card {
+    border-radius: 1.5rem;
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    transition: all 0.3s ease;
+}
+
+:root:not(.dark) .contact-card {
+    border: 1px solid rgba(226, 232, 240, 0.9);
+    background: rgba(255, 255, 255, 0.85);
+    box-shadow: 0 10px 30px -10px rgba(99, 102, 241, 0.08);
+}
+
+.contact-input {
+    width: 100%;
+    padding: 0.875rem 1rem;
+    border-radius: 0.75rem;
+    font-size: 0.875rem;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+:root:not(.dark) .contact-input {
+    border: 1px solid rgba(203, 213, 225, 0.9);
+    background: #ffffff;
+    color: #0f172a;
+}
+
+.contact-input:focus {
+    border-color: #6366f1;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+
+.contact-submit-btn {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    font-weight: 700;
+    color: #ffffff;
+    background: linear-gradient(135deg, #4f46e5, #0ea5e9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    box-shadow: 0 10px 25px -5px rgba(79, 70, 229, 0.4);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.contact-submit-btn:hover {
+    box-shadow: 0 15px 30px -5px rgba(79, 70, 229, 0.55);
+    filter: brightness(1.08);
+}
+
+.contact-submit-btn:active {
+    transform: scale(0.99);
+}
+
+.contact-submit-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
