@@ -46,7 +46,9 @@ export default function Experience({ darkMode }) {
 
     const filtered = filter === 'all'
         ? experiences
-        : experiences.filter(exp => exp.type === filter);
+        : filter === 'certifications'
+        ? []
+        : experiences.filter(exp => exp.category === filter || exp.type === filter);
 
     return (
         <section id="experience" className="py-20 relative">
@@ -57,15 +59,15 @@ export default function Experience({ darkMode }) {
                         darkMode ? 'bg-indigo-500/10 border border-indigo-500/20 text-indigo-400' : 'bg-indigo-50 border border-indigo-200 text-indigo-700 shadow-sm'
                     }`}>
                         <Briefcase className="w-3.5 h-3.5" />
-                        <span>PENGALAMAN &amp; PENDIDIKAN</span>
+                        <span>PENGALAMAN MAGANG</span>
                     </div>
                     <h2 className={`text-3xl sm:text-4xl font-extrabold tracking-tight mb-4 ${
                         darkMode ? 'text-white' : 'bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-800 bg-clip-text text-transparent'
                     }`}>
-                        Rekam Jejak Industri &amp; Fondasi Akademik
+                        Pengalaman Magang &amp; Rekam Jejak Industri
                     </h2>
                     <p className={`text-base sm:text-lg ${darkMode ? 'text-slate-400' : 'text-slate-600'}`}>
-                        Implementasi kecerdasan buatan terapan, sistem dashboard terintegrasi, serta bukti empiris dokumentasi proyek dari GitHub dan sertifikasi resmi.
+                        Rekam jejak pelaksanaan program magang dan proyek nyata di BUMN PT. Pindad (Persero), RSU Pindad, dan industri teknologi, didukung dokumentasi visual empiris dan sertifikat verifikasi resmi.
                     </p>
                 </div>
 
@@ -81,12 +83,12 @@ export default function Experience({ darkMode }) {
                                 : 'bg-white text-slate-600 hover:text-slate-900 border border-slate-200'
                         }`}
                     >
-                        Semua Riwayat
+                        Semua Magang ({experiences.length})
                     </button>
                     <button
-                        onClick={() => setFilter('work')}
+                        onClick={() => setFilter('software')}
                         className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all flex items-center gap-1.5 ${
-                            filter === 'work'
+                            filter === 'software'
                                 ? 'bg-gradient-to-r from-indigo-600 to-sky-500 text-white shadow-md shadow-indigo-500/25'
                                 : darkMode
                                 ? 'bg-slate-900/60 text-slate-400 hover:text-white border border-slate-800'
@@ -94,20 +96,20 @@ export default function Experience({ darkMode }) {
                         }`}
                     >
                         <Briefcase className="w-3.5 h-3.5" />
-                        <span>Pengalaman Industri</span>
+                        <span>Software &amp; AI Magang</span>
                     </button>
                     <button
-                        onClick={() => setFilter('education')}
+                        onClick={() => setFilter('hardware')}
                         className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all flex items-center gap-1.5 ${
-                            filter === 'education'
+                            filter === 'hardware'
                                 ? 'bg-gradient-to-r from-indigo-600 to-sky-500 text-white shadow-md shadow-indigo-500/25'
                                 : darkMode
                                 ? 'bg-slate-900/60 text-slate-400 hover:text-white border border-slate-800'
                                 : 'bg-white text-slate-600 hover:text-slate-900 border border-slate-200'
                         }`}
                     >
-                        <GraduationCap className="w-3.5 h-3.5" />
-                        <span>Pendidikan</span>
+                        <Briefcase className="w-3.5 h-3.5" />
+                        <span>IT Support &amp; Hardware</span>
                     </button>
                     <button
                         onClick={() => setFilter('certifications')}
@@ -120,7 +122,7 @@ export default function Experience({ darkMode }) {
                         }`}
                     >
                         <Award className="w-3.5 h-3.5" />
-                        <span>Sertifikasi BNSP &amp; Pelatihan</span>
+                        <span>Sertifikasi &amp; SK Prakerin</span>
                     </button>
                 </div>
 
@@ -161,15 +163,14 @@ export default function Experience({ darkMode }) {
                     /* Vertical Timeline */
                     <div className="relative pl-6 sm:pl-8 border-l-2 border-indigo-500/30 space-y-12">
                         {filtered.map((item, index) => {
-                            const isEducation = item.type === 'education';
                             return (
                                 <div key={item.id || index} className="relative group">
                                     {/* Timeline Dot */}
                                     <div className="absolute -left-[31px] sm:-left-[39px] top-2 w-6 h-6 rounded-full bg-slate-900 border-2 border-indigo-400 flex items-center justify-center shadow-md shadow-indigo-500/30 group-hover:scale-125 transition-transform duration-300">
-                                        {index === 0 && item.type === 'work' && (
+                                        {index === 0 && (
                                             <span className="absolute -inset-1 rounded-full bg-emerald-400/50 animate-ping pointer-events-none" />
                                         )}
-                                        <div className={`w-2 h-2 rounded-full ${index === 0 && item.type === 'work' ? 'bg-emerald-400' : 'bg-indigo-400'}`}></div>
+                                        <div className={`w-2 h-2 rounded-full ${index === 0 ? 'bg-emerald-400' : 'bg-indigo-400'}`}></div>
                                     </div>
 
                                     {/* Content Card */}
@@ -186,14 +187,10 @@ export default function Experience({ darkMode }) {
                                                 <span className="px-3 py-1 rounded-full text-xs font-bold bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">
                                                     {item.period}
                                                 </span>
-                                                <span className={`text-xs px-2.5 py-0.5 rounded-full font-medium ${
-                                                    isEducation
-                                                        ? 'bg-amber-500/10 text-amber-400 border border-amber-500/20'
-                                                        : 'bg-emerald-500/10 text-emerald-400 border border-emerald-500/20'
-                                                }`}>
-                                                    {isEducation ? 'Pendidikan' : 'Karier Industri'}
+                                                <span className="text-xs px-2.5 py-0.5 rounded-full font-medium bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                                                    {item.badge || 'Magang Industri'}
                                                 </span>
-                                                {index === 0 && item.type === 'work' && (
+                                                {index === 0 && (
                                                     <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-400 border border-emerald-500/30 shadow-[0_0_10px_rgba(16,185,129,0.2)]">
                                                         <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
                                                         <span>Proyek Terkini</span>

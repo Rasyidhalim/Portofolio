@@ -122,15 +122,104 @@ export const projects = [
     }
 ];
 
+export const aboutPersonas = {
+    dataAnalyst: {
+        id: "dataAnalyst",
+        tabLabel: "Data Analyst",
+        tabSub: "Business Intelligence & SQL",
+        roleTitle: "Data Analyst & Business Intelligence Specialist",
+        badge: "Certified Data Analyst",
+        headline: "Mentransformasikan Data Kompleks Menjadi Wawasan Bisnis Strategis & Keputusan Presisi",
+        bioLong: "Memiliki kompetensi teruji dalam mentransformasikan data mentah yang heterogen menjadi wawasan bisnis strategis yang dapat ditindaklanjuti (actionable insights). Tersertifikasi resmi oleh Badan Nasional Sertifikasi Profesi (BNSP) Republik Indonesia bidang Data Analytics dan Google Gemini AI.",
+        bioSecondary: "Ahli dalam pembersihan data (ETL & Data Wrangling), analisis data eksploratif (EDA) dengan Python dan SQL, serta merancang dashboard Business Intelligence multi-dimensi interaktif menggunakan Power BI, Tableau, dan Advanced Microsoft Excel untuk mendukung pengambilan keputusan manajemen eksekutif.",
+        highlights: [
+            { label: "Sertifikasi Resmi", value: "BNSP Analis Data & Google Gemini AI", icon: "Award" },
+            { label: "Tools Utama", value: "SQL, Python, Power BI, Tableau, Excel", icon: "Database" },
+            { label: "Fokus Analisis", value: "Business Intelligence, KPI, Wrangling & EDA", icon: "BarChart3" },
+            { label: "Metodologi", value: "Standard Kompetensi Kerja Nasional (SKKNI)", icon: "ShieldCheck" }
+        ],
+        pillars: [
+            {
+                icon: "BarChart3",
+                title: "Business Intelligence & Interactive Dashboards",
+                desc: "Desain visualisasi interaktif multi-chart di Power BI & Tableau untuk pelacakan KPI eksekutif, tren pendapatan, dan segmentasi performa bisnis secara dinamis."
+            },
+            {
+                icon: "Database",
+                title: "Advanced SQL & Database Modeling",
+                desc: "Penulisan query analitik mendalam, subqueries, complex joins, indexing, serta pemodelan skema relasional untuk eksplorasi dan ekstraksi dataset berskala besar."
+            },
+            {
+                icon: "LineChart",
+                title: "Exploratory Data Analysis (EDA) & Wrangling",
+                desc: "Pembersihan dataset mentah, penanganan missing values & outliers, validasi integritas data kuantitatif, dan eksplorasi korelasi menggunakan Python Pandas & NumPy."
+            },
+            {
+                icon: "FileSpreadsheet",
+                title: "Spreadsheet Analytics & Executive Reporting",
+                desc: "Pemrosesan data presisi menggunakan Advanced Microsoft Excel (Pivot Table, XLOOKUP, Nested Formulas, Data Modeling) sesuai standar uji kompetensi resmi BNSP."
+            }
+        ],
+        tags: ["Power BI", "Tableau", "SQL & MySQL", "Python (Pandas, NumPy)", "Advanced Excel", "ETL", "SKKNI BNSP"],
+        actionLink: "projects",
+        actionCategory: "data",
+        actionText: "Eksplorasi Proyek Data Analyst"
+    },
+    softwareDev: {
+        id: "softwareDev",
+        tabLabel: "Software Development",
+        tabSub: "Fullstack Web & AI Engineering",
+        roleTitle: "Software Developer & AI Engineer",
+        badge: "Full-Stack & Applied AI",
+        headline: "Merancang Arsitektur Web Skalabel, API Berkinerja Tinggi & Sistem AI Terapan",
+        bioLong: "Memiliki keahlian rekayasa perangkat lunak ujung-ke-ujung (full-stack engineering) dengan fokus pada pembuatan sistem web yang tangguh, aman, dan berkinerja tinggi. Berpengalaman langsung merancang sistem Kiosk Pengenalan Wajah Biometrik (Face Recognition) real-time di RSU Pindad.",
+        bioSecondary: "Mahir mengintegrasikan arsitektur microservices antara FastAPI Python (Computer Vision: YOLOv8 & DeepFace FaceNet 128-D) dan Laravel REST API, dengan mekanisme sinkronisasi database MySQL-to-RAM untuk mencapai latensi ultra-rendah (<300ms). Berpengalaman juga membangun dashboard inventaris IT di PT. Pindad (Persero).",
+        highlights: [
+            { label: "Pendidikan & Nilai", value: "S1 Teknik Informatika UNIKOM (IPK 3.36 / S.Kom)", icon: "GraduationCap" },
+            { label: "Implementasi Nyata", value: "Kiosk AI Biometrik Pasien di RSU Pindad", icon: "BrainCircuit" },
+            { label: "Pengalaman Industri", value: "IT Warehouse Dashboard di PT. Pindad (Persero)", icon: "Briefcase" },
+            { label: "Keahlian Khusus", value: "Microservices, RAM Caching Latensi <300ms, REST API", icon: "Layers" }
+        ],
+        pillars: [
+            {
+                icon: "Layers",
+                title: "Full-Stack Web Architecture",
+                desc: "Pengembangan sistem web modular dari backend tangguh (Laravel REST API, FastAPI) hingga antarmuka front-end responsif dan dinamis (React, Vue.js, Tailwind CSS)."
+            },
+            {
+                icon: "BrainCircuit",
+                title: "Applied AI & Computer Vision Integration",
+                desc: "Penerapan model deep learning (YOLOv8, MediaPipe, FaceNet 128-D) ke dalam sistem produksi nyata dengan pemrosesan video stream berakurasi tinggi."
+            },
+            {
+                icon: "Cpu",
+                title: "High-Performance & Low Latency (<300ms)",
+                desc: "Optimasi latensi pemrosesan biometrik dengan teknik cache database MySQL-to-RAM dan kalkulasi Cosine Similarity instan pada perangkat Kiosk."
+            },
+            {
+                icon: "Server",
+                title: "RESTful APIs & Microservices Integration",
+                desc: "Perancangan arsitektur microservices terpisah yang saling berkomunikasi secara asinkron, aman, dan siap untuk deployment skala industri."
+            }
+        ],
+        tags: ["FastAPI", "Python", "Laravel", "React", "Vue.js", "Tailwind CSS", "MySQL", "YOLOv8", "DeepFace"],
+        actionLink: "projects",
+        actionCategory: "ai",
+        actionText: "Eksplorasi Proyek Software & AI"
+    }
+};
+
 export const experiences = [
     {
         id: "exp-rsu-pindad",
         period: "Jan 2026 – Jun 2026",
-        role: "AI & Fullstack Developer (Project)",
+        role: "AI & Fullstack Developer (Magang Proyek AI)",
         company: "RSU Pindad Bandung",
         logo: "/images/rsu-pindad/logo-rs-pindad.png",
         location: "Bandung, Indonesia",
-        type: "work",
+        type: "internship",
+        category: "software",
+        badge: "Magang Proyek AI Terapan",
         githubUrl: "https://github.com/Rasyidhalim/Face-recognition-peserta-jppk",
         tags: ["FastAPI", "Python", "Laravel", "YOLOv8", "FaceNet", "MySQL", "Vue.js / Blade"],
         description: "Merancang dan mendeploy sistem Kiosk pengenalan wajah biometrik real-time untuk verifikasi pasien JPPK menggunakan YOLOv8, MediaPipe, dan DeepFace (FaceNet 128-D).",
@@ -158,11 +247,13 @@ export const experiences = [
     {
         id: "exp-pt-pindad",
         period: "Sep 2025 – Oct 2025",
-        role: "Fullstack Developer (Internship)",
+        role: "Fullstack Developer (Magang BUMN Resmi)",
         company: "PT. Pindad (Persero) Bandung",
         logo: "/images/rsu-pindad/logo-rs-pindad.png",
         location: "Bandung, Indonesia",
-        type: "work",
+        type: "internship",
+        category: "software",
+        badge: "Magang Prakerin BUMN",
         docUrl: "/certificates/surat lulus magang.pdf",
         tags: ["Fullstack Web", "Inventory Logistics", "PHP", "MySQL", "Bootstrap"],
         description: "Merancang dan mengembangkan dashboard manajemen gudang IT full-stack untuk memantau inventaris hardware dan operasional logistik departemen TI & Inovasi.",
@@ -183,10 +274,12 @@ export const experiences = [
     {
         id: "exp-tim",
         period: "Jan 2019 – Jun 2019",
-        role: "IT Support & Hardware (Internship)",
+        role: "IT Support & Hardware (Magang Industri)",
         company: "PT. Teknologi Inti Makmur",
         location: "Bandung, Indonesia",
-        type: "work",
+        type: "internship",
+        category: "hardware",
+        badge: "Magang Industri",
         docUrl: "/certificates/hardware.pdf",
         tags: ["Hardware Troubleshooting", "PC Assembly", "LAN / Networking", "Maintenance"],
         description: "Merakit, memprogram perangkat monitoring hardware kustom, dan melakukan pemeliharaan infrastruktur operasional secara real-time.",
@@ -202,51 +295,6 @@ export const experiences = [
                 badge: "Nilai 90.62 Istimewa",
                 docUrl: "/certificates/hardware.pdf"
             }
-        ]
-    },
-    {
-        id: "exp-unikom",
-        period: "Sep 2022 – Nov 2026",
-        role: "Sarjana Komputer (S.Kom) - Teknik Informatika",
-        company: "Universitas Komputer Indonesia (UNIKOM) Bandung",
-        logo: "/images/unikom-logo.png",
-        location: "Bandung, Indonesia",
-        type: "education",
-        tags: ["Data Analytics", "Machine Learning", "Database Systems", "AI", "Business Intelligence"],
-        description: "Lulus dengan predikat Sangat Memuaskan (IPK 3.36 / 4.00). Fokus studi pada Data Analytics, Machine Learning, Database Management Systems, AI, Data Mining, dan Business Intelligence.",
-        highlights: [
-            "Penelitian skripsi implementasi Face Recognition Kiosk di RSU Pindad",
-            "Sertifikasi Kompetensi Analis Data Nasional (BNSP) dan Google AI Gemini Certified",
-            "Aktif dalam riset teknologi dan rekayasa kecerdasan buatan terapan"
-        ],
-        media: [
-            {
-                title: "Sertifikat Kompetensi Analis Data Resmi BNSP",
-                caption: "Lisensi kompetensi analis data Republik Indonesia (SKKNI) No. Reg. TIK 1526 01487 2026",
-                image: "/images/certificates/cert-bnsp.jpg",
-                badge: "BNSP Kompeten",
-                docUrl: "/certificates/Sertifikat BNSP.pdf"
-            },
-            {
-                title: "Google AI Gemini Certified Student",
-                caption: "Sertifikasi Artificial Intelligence, LLM Workflows, and Prompt Engineering Google for Education",
-                image: "/images/certificates/cert-ai.jpg",
-                badge: "Google Certified",
-                docUrl: "/certificates/sertif ai.pdf"
-            }
-        ]
-    },
-    {
-        id: "exp-smkn4",
-        period: "Jul 2019 – Jul 2022",
-        role: "Teknik Komputer dan Jaringan (TKJ)",
-        company: "SMKN 4 Bandung",
-        location: "Bandung, Indonesia",
-        type: "education",
-        tags: ["MikroTik", "Cisco", "Linux Server", "Switching & Routing", "Fiber Optics"],
-        description: "Mempelajari infrastruktur jaringan, routing, switching, konfigurasi MikroTik & Cisco, serta administrasi server Linux/Windows (DNS, DHCP, Web Server).",
-        highlights: [
-            "Menguasai perakitan hardware komputer, instalasi OS, keamanan jaringan, dan troubleshooting sistematis"
         ]
     }
 ];

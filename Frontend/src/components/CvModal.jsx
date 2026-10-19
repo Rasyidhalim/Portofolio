@@ -168,7 +168,7 @@ export default function CvModal({ isOpen, onClose, darkMode }) {
                     {/* Section: Pengalaman Kerja & Proyek Nyata */}
                     <div>
                         <h3 className="text-sm font-bold uppercase tracking-wider text-indigo-400 mb-4 border-b border-indigo-500/30 pb-1 inline-block">
-                            Pengalaman Kerja &amp; Proyek Industri
+                            Pengalaman Magang &amp; Proyek Industri
                         </h3>
                         <div className="space-y-6">
                             {experiences.map((exp, idx) => (
