@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react';
-import { X, Sparkles, CheckCircle2, Code2, ExternalLink, FileText, Cpu, Layers, BarChart3 } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { X, Sparkles, CheckCircle2, Code2, ExternalLink, FileText, Cpu, Layers, BarChart3, ImageIcon } from 'lucide-react';
 
 // GitHub Octocat SVG
 function GithubIcon({ className = "w-4 h-4" }) {
@@ -24,6 +24,12 @@ function getCategoryIcon(cat) {
 }
 
 export default function ProjectModal({ project, isOpen, onClose, darkMode }) {
+    const [activeImageIdx, setActiveImageIdx] = useState(0);
+
+    useEffect(() => {
+        setActiveImageIdx(0);
+    }, [project]);
+
     useEffect(() => {
         const handleKeyDown = (e) => {
             if (e.key === 'Escape') onClose();
@@ -138,6 +144,69 @@ export default function ProjectModal({ project, isOpen, onClose, darkMode }) {
                             {project.summary}
                         </p>
                     </div>
+
+                    {/* Screenshot Gallery */}
+                    {project.gallery && project.gallery.length > 0 && (
+                        <div>
+                            <div className="flex items-center justify-between mb-3">
+                                <h4 className="text-xs uppercase font-bold tracking-wider text-indigo-400 flex items-center gap-1.5">
+                                    <ImageIcon className="w-3.5 h-3.5" />
+                                    <span>Tangkapan Layar &amp; Visualisasi Asli</span>
+                                </h4>
+                                <span className="text-[11px] font-mono text-slate-400">
+                                    {activeImageIdx + 1} / {project.gallery.length}
+                                </span>
+                            </div>
+
+                            {/* Main Preview */}
+                            <div className={`relative rounded-2xl overflow-hidden border mb-3 ${
+                                darkMode ? 'bg-slate-950 border-slate-800' : 'bg-slate-100 border-slate-200'
+                            }`}>
+                                <div className="max-h-[320px] sm:max-h-[380px] overflow-hidden flex items-center justify-center p-2 bg-slate-950">
+                                    <img
+                                        src={project.gallery[activeImageIdx]?.url}
+                                        alt={project.gallery[activeImageIdx]?.caption}
+                                        className="max-h-[300px] sm:max-h-[360px] w-auto max-w-full object-contain rounded-lg transition-all duration-300 hover:scale-[1.02]"
+                                    />
+                                </div>
+                                <div className={`p-3 px-4 text-xs font-medium border-t flex items-center justify-between ${
+                                    darkMode ? 'bg-slate-900/90 border-slate-800 text-slate-200' : 'bg-white/95 border-slate-200 text-slate-700'
+                                }`}>
+                                    <span className="truncate pr-3">{project.gallery[activeImageIdx]?.caption}</span>
+                                    <a
+                                        href={project.gallery[activeImageIdx]?.url}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="text-indigo-400 hover:text-indigo-300 inline-flex items-center gap-1 font-semibold text-[11px] shrink-0"
+                                    >
+                                        <span>Buka Gambar Penuh</span>
+                                        <ExternalLink className="w-3 h-3" />
+                                    </a>
+                                </div>
+                            </div>
+
+                            {/* Thumbnail Selector Pills */}
+                            <div className="flex items-center gap-2 overflow-x-auto pb-1 scrollbar-thin">
+                                {project.gallery.map((item, idx) => (
+                                    <button
+                                        key={idx}
+                                        onClick={() => setActiveImageIdx(idx)}
+                                        className={`relative rounded-xl overflow-hidden border-2 shrink-0 transition-all ${
+                                            activeImageIdx === idx
+                                                ? 'border-indigo-500 scale-105 shadow-md shadow-indigo-500/25'
+                                                : 'border-transparent opacity-60 hover:opacity-100'
+                                        }`}
+                                    >
+                                        <img
+                                            src={item.url}
+                                            alt={item.caption}
+                                            className="w-16 h-11 object-cover bg-slate-900"
+                                        />
+                                    </button>
+                                ))}
+                            </div>
+                        </div>
+                    )}
 
                     {/* Features Breakdown */}
                     {project.features && (

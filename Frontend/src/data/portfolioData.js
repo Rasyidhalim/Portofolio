@@ -22,7 +22,7 @@ export const stats = [
     { value: "3.36", label: "IPK Teknik Informatika UNIKOM", icon: "GraduationCap" },
     { value: "BNSP", label: "Certified Data Analyst", icon: "Award" },
     { value: "Google", label: "Gemini Certified Student", icon: "Sparkles" },
-    { value: "PINDAD", label: "Pengalaman AI & Fullstack", icon: "Briefcase" },
+    { value: "PINDAD", label: "Magang Fullstack BUMN", icon: "Briefcase" },
 ];
 
 export const skillCategories = [
@@ -57,6 +57,9 @@ export const projects = [
     {
         id: 1,
         title: "Biometric Face Recognition Kiosk - RSU Pindad",
+        folderTitle: "Biometric Face Kiosk",
+        folderSubtitle: "Real-time facial verification & 128-D FaceNet kiosk at RSU Pindad.",
+        actionText: "Click folder to explore",
         category: "ai",
         categoryLabel: "AI & Computer Vision",
         githubUrl: "https://github.com/Rasyidhalim/Face-recognition-peserta-jppk",
@@ -64,6 +67,11 @@ export const projects = [
         tags: ["FastAPI", "Python", "YOLOv8", "DeepFace (FaceNet)", "Laravel REST API", "Vue.js", "MySQL-RAM"],
         summary: "Sistem Kiosk pengenalan wajah biometrik real-time untuk verifikasi pasien JPPK RSU Pindad tanpa kartu. Menggunakan video stream 200-frame untuk ekstraksi embedding akurasi tinggi serta pencocokan Cosine Similarity instan.",
         highlight: "Implementasi Nyata & Karya Skripsi di RSU Pindad Bandung",
+        image: "/images/rsu-pindad/grafik_embedding.png",
+        gallery: [
+            { url: "/images/rsu-pindad/grafik_embedding.png", caption: "Distribusi Vektor Embedding FaceNet 128-D & Cosine Similarity" },
+            { url: "/images/rsu-pindad/confusion_matrix.png", caption: "Confusion Matrix Hasil Evaluasi Akurasi Pengenalan Wajah" }
+        ],
         features: [
             "Pencocokan biometrik berlatensi ultra-rendah (<300ms) dengan mekanisme cache RAM",
             "Ekstraksi fitur 128-dimensi FaceNet dengan YOLOv8 face localization & MediaPipe",
@@ -74,6 +82,9 @@ export const projects = [
     {
         id: 2,
         title: "IT Warehouse & Asset Logistics Management - PT. Pindad",
+        folderTitle: "IT Warehouse Logistics",
+        folderSubtitle: "Enterprise hardware inventory tracking and multi-department logistics.",
+        actionText: "Click document to open PDF",
         category: "fullstack",
         categoryLabel: "Enterprise Dashboard",
         docUrl: "/certificates/surat lulus magang.pdf",
@@ -81,6 +92,13 @@ export const projects = [
         tags: ["Laravel", "PHP", "MySQL", "Inventory Tracking", "Hardware Logistics", "Tailwind"],
         summary: "Dashboard inventaris IT komprehensif di PT. Pindad (Persero) untuk memonitor ketersediaan hardware, pelacakan unit, riwayat pemeliharaan, serta log aktivitas operasional secara real-time.",
         highlight: "Internship Fullstack Developer di PT. Pindad (Persero)",
+        image: "/images/pindad-warehouse/dashboard_utama.jpeg",
+        gallery: [
+            { url: "/images/pindad-warehouse/dashboard_utama.jpeg", caption: "Dashboard Utama & Ringkasan Status Manufaktur TI" },
+            { url: "/images/pindad-warehouse/manajemen_manufaktur.jpeg", caption: "Form & Tabel Inventaris Manajemen Manufaktur TI" },
+            { url: "/images/pindad-warehouse/peminjaman_tools.jpeg", caption: "Sistem Peminjaman & Pengembalian Tools" },
+            { url: "/images/pindad-warehouse/laporan_inventaris.jpeg", caption: "Laporan Inventaris Gudang Terpadu & Fitur Export Excel" }
+        ],
         features: [
             "Pelacakan siklus hidup aset hardware komputer dan periferal departemen TI",
             "Sistem pencatatan log masuk/keluar barang dengan otorisasi pengguna",
@@ -91,6 +109,9 @@ export const projects = [
     {
         id: 3,
         title: "Executive Business Intelligence & Sales Analytics",
+        folderTitle: "BNSP Data Analyst",
+        folderSubtitle: "Data analysis assignment and project documentation.",
+        actionText: "Click document to open PDF",
         category: "data",
         categoryLabel: "Business Intelligence",
         docUrl: "/certificates/Sertifikat BNSP.pdf",
@@ -98,26 +119,19 @@ export const projects = [
         tags: ["Power BI", "Tableau", "SQL", "Python", "Data Wrangling", "BNSP"],
         summary: "Dashboard visualisasi analitik penjualan dan segmentasi demografis pelanggan. Menampilkan metrik performa multi-chart, analisis tren pendapatan, dan KPI prediktif berdasarkan standar kompetensi kerja nasional.",
         highlight: "Sertifikasi Kompetensi BNSP Data Analyst Resmi",
+        image: "/images/bnsp-analytics/dashboard_penjualan.jpeg",
+        gallery: [
+            { url: "/images/bnsp-analytics/dashboard_penjualan.jpeg", caption: "Dashboard Eksekutif Penjualan Elektronik Multi-Chart" },
+            { url: "/images/bnsp-analytics/tren_wilayah.jpeg", caption: "Visualisasi Analisis Tren Penjualan Berdasarkan Wilayah" },
+            { url: "/images/bnsp-analytics/tren_produk.jpeg", caption: "Distribusi Pangsa Pasar Penjualan Berdasarkan Produk" },
+            { url: "/images/bnsp-analytics/tren_bulanan.jpeg", caption: "Grafik Tren Fluktuasi Penjualan Bulanan (Sale Date)" },
+            { url: "/images/bnsp-analytics/data_cleaning.jpeg", caption: "Data Profiling & Validasi Kualitas Data 100% Valid (Power Query)" }
+        ],
         features: [
             "Pembersihan dan validasi dataset kompleks menggunakan Python (Pandas/NumPy) dan SQL",
             "Desain dashboard eksekutif interaktif multi-chart di Power BI & Tableau",
             "Segmentasi pola belanja pelanggan dan analisis profitabilitas produk",
             "Sesuai standar unit kompetensi SKKNI Badan Nasional Sertifikasi Profesi (BNSP)"
-        ]
-    },
-    {
-        id: 4,
-        title: "Synapse AI & Data Analytics Workspace",
-        category: "ai",
-        categoryLabel: "Modern Web Platform",
-        metrics: ["Modular UI", "REST API Ready", "Dark / Light Mode"],
-        tags: ["React", "TypeScript", "Tailwind CSS", "Data Analytics UI"],
-        summary: "Antarmuka ruang kerja analitik berbasis web dengan visualisasi data interaktif, live code preview, serta pemrosesan data responsif untuk kebutuhan eksplorasi data science.",
-        highlight: "Eksplorasi Modern React & Frontend Engineering",
-        features: [
-            "Arsitektur komponen modular berbasis React dan Tailwind CSS",
-            "Kompatibilitas tema ganda (Dark Mode & Light Mode) dengan transisi halus",
-            "Visualisasi bagan performa interaktif dan manajemen state terstruktur"
         ]
     }
 ];
@@ -211,55 +225,23 @@ export const aboutPersonas = {
 
 export const experiences = [
     {
-        id: "exp-rsu-pindad",
-        period: "Jan 2026 – Jun 2026",
-        role: "AI & Fullstack Developer (Magang Proyek AI)",
-        company: "RSU Pindad Bandung",
-        logo: "/images/rsu-pindad/logo-rs-pindad.png",
-        location: "Bandung, Indonesia",
-        type: "internship",
-        category: "software",
-        badge: "Magang Proyek AI Terapan",
-        githubUrl: "https://github.com/Rasyidhalim/Face-recognition-peserta-jppk",
-        tags: ["FastAPI", "Python", "Laravel", "YOLOv8", "FaceNet", "MySQL", "Vue.js / Blade"],
-        description: "Merancang dan mendeploy sistem Kiosk pengenalan wajah biometrik real-time untuk verifikasi pasien JPPK menggunakan YOLOv8, MediaPipe, dan DeepFace (FaceNet 128-D).",
-        highlights: [
-            "Membangun arsitektur microservices performa tinggi mengintegrasikan FastAPI Python AI backend, Laravel REST API, dan antarmuka web Vue.js",
-            "Mengoptimalkan pemindaian biometrik dengan mekanisme sinkronisasi database MySQL-to-RAM dan algoritma Cosine Similarity untuk pencocokan berlatensi ultra-rendah (<300ms)",
-            "Merekrut fitur ekstraksi biometrik hybrid memproses 200-frame video stream untuk menghasilkan face embeddings berakurasi tinggi (Super DNA)",
-            "Penulis karya ilmiah skripsi: 'Pembangunan Aplikasi Peserta JPPK Berbasis Face Recognition Terintegrasi WhatsApp API Sebagai Solusi Layanan Tanpa Kartu'"
-        ],
-        media: [
-            {
-                title: "Confusion Matrix - Evaluasi Akurasi AI",
-                caption: "Matrix pengujian akurasi identifikasi wajah peserta terdaftar & tidak dikenal (FaceNet 128-D)",
-                image: "/images/rsu-pindad/confusion_matrix.png",
-                badge: "Akurasi Model AI"
-            },
-            {
-                title: "FaceNet 128-Dimensi Embedding Vector",
-                caption: "Visualisasi sebaran vektor fitur biometrik wajah untuk kalkulasi Cosine Similarity",
-                image: "/images/rsu-pindad/grafik_embedding.png",
-                badge: "Vector 128-D"
-            }
-        ]
-    },
-    {
         id: "exp-pt-pindad",
-        period: "Sep 2025 – Oct 2025",
+        period: "Sep 2025 – Okt 2025",
         role: "Fullstack Developer (Magang BUMN Resmi)",
         company: "PT. Pindad (Persero) Bandung",
         logo: "/images/rsu-pindad/logo-rs-pindad.png",
         location: "Bandung, Indonesia",
         type: "internship",
         category: "software",
-        badge: "Magang Prakerin BUMN",
+        badge: "Magang Prakerin BUMN Resmi",
         docUrl: "/certificates/surat lulus magang.pdf",
-        tags: ["Fullstack Web", "Inventory Logistics", "PHP", "MySQL", "Bootstrap"],
-        description: "Merancang dan mengembangkan dashboard manajemen gudang IT full-stack untuk memantau inventaris hardware dan operasional logistik departemen TI & Inovasi.",
+        tags: ["Fullstack Web", "Inventory Logistics", "PHP", "Laravel", "MySQL", "Tailwind CSS"],
+        description: "Merancang dan mengembangkan dashboard manajemen gudang IT full-stack untuk memantau inventaris hardware manufaktur dan operasional logistik departemen TI & Layanan Inovasi PT. Pindad (Persero).",
         highlights: [
-            "Membangun antarmuka front-end responsif dan mengelola server logic back-end dengan database untuk menyederhanakan pelacakan barang dan update log",
-            "Berkolaborasi dalam siklus hidup pengembangan perangkat lunak (SDLC) untuk menjamin akurasi integrasi data dan stabilitas sistem alur kerja gudang"
+            "Membangun antarmuka web responsif dan modul backend inventory tracking dengan otorisasi pengguna",
+            "Merancang sistem pencatatan log masuk/keluar barang (peminjaman & pengembalian tools) serta manajemen inventaris manufaktur TI",
+            "Mengimplementasikan fitur pelaporan dan export data ke Microsoft Excel untuk efisiensi audit berkala",
+            "Terverifikasi resmi melalui Surat Keputusan Kelulusan Prakerin PT. Pindad (Persero) dengan predikat Selesai dengan Baik"
         ],
         media: [
             {
@@ -268,32 +250,30 @@ export const experiences = [
                 image: "/images/certificates/cert-pindad.jpg",
                 badge: "Sertifikat Resmi",
                 docUrl: "/certificates/surat lulus magang.pdf"
-            }
-        ]
-    },
-    {
-        id: "exp-tim",
-        period: "Jan 2019 – Jun 2019",
-        role: "IT Support & Hardware (Magang Industri)",
-        company: "PT. Teknologi Inti Makmur",
-        location: "Bandung, Indonesia",
-        type: "internship",
-        category: "hardware",
-        badge: "Magang Industri",
-        docUrl: "/certificates/hardware.pdf",
-        tags: ["Hardware Troubleshooting", "PC Assembly", "LAN / Networking", "Maintenance"],
-        description: "Merakit, memprogram perangkat monitoring hardware kustom, dan melakukan pemeliharaan infrastruktur operasional secara real-time.",
-        highlights: [
-            "Melakukan monitoring sistem berkala, pemeliharaan hardware, dan troubleshooting guna meminimalkan downtime teknis",
-            "Menangani isu hardware, software, dan jaringan harian untuk kelancaran operasional internal"
-        ],
-        media: [
+            },
             {
-                title: "Sertifikasi Hardware & Perakitan Komputer (AP2SC UNIKOM)",
-                caption: "Predikat Nilai Istimewa (90.62) perakitan PC, troubleshooting komponen, dan infrastruktur sistem",
-                image: "/images/certificates/cert-hardware.jpg",
-                badge: "Nilai 90.62 Istimewa",
-                docUrl: "/certificates/hardware.pdf"
+                title: "Dashboard Utama Inventaris & Ringkasan Status",
+                caption: "Tampilan visualisasi ringkasan status inventaris hardware manufaktur TI dan tools di PT. Pindad",
+                image: "/images/pindad-warehouse/dashboard_utama.jpeg",
+                badge: "Tangkapan Layar Sistem"
+            },
+            {
+                title: "Form & Tabel Inventaris Manufaktur TI",
+                caption: "Manajemen input barang, pencatatan kode asset, nama pegawai, lokasi gudang, dan status barang",
+                image: "/images/pindad-warehouse/manajemen_manufaktur.jpeg",
+                badge: "Tangkapan Layar Sistem"
+            },
+            {
+                title: "Sistem Peminjaman & Pengembalian Tools",
+                caption: "Pencatatan sirkulasi peminjaman peralatan teknis (tools) departemen TI",
+                image: "/images/pindad-warehouse/peminjaman_tools.jpeg",
+                badge: "Tangkapan Layar Sistem"
+            },
+            {
+                title: "Laporan Inventaris Gudang & Fitur Export Excel",
+                caption: "Audit log inventaris gudang komprehensif dengan fitur export format spreadsheet",
+                image: "/images/pindad-warehouse/laporan_inventaris.jpeg",
+                badge: "Tangkapan Layar Sistem"
             }
         ]
     }

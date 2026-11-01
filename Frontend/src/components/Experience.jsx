@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { experiences, certifications } from '../data/portfolioData';
+import { experiences } from '../data/portfolioData';
 import { 
     Briefcase, 
     GraduationCap, 
@@ -23,7 +23,6 @@ function GithubIcon({ className = "w-4 h-4" }) {
 }
 
 export default function Experience({ darkMode }) {
-    const [filter, setFilter] = useState('all');
     const [activeModalMedia, setActiveModalMedia] = useState(null);
 
     // Close modal on Escape key
@@ -44,17 +43,11 @@ export default function Experience({ darkMode }) {
         }
     }, [activeModalMedia]);
 
-    const filtered = filter === 'all'
-        ? experiences
-        : filter === 'certifications'
-        ? []
-        : experiences.filter(exp => exp.category === filter || exp.type === filter);
-
     return (
         <section id="experience" className="py-20 relative">
             <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Header */}
-                <div className="text-center max-w-3xl mx-auto mb-12">
+                <div className="text-center max-w-3xl mx-auto mb-14">
                     <div className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold mb-3 ${
                         darkMode ? 'bg-indigo-500/10 border border-indigo-500/20 text-indigo-400' : 'bg-indigo-50 border border-indigo-200 text-indigo-700 shadow-sm'
                     }`}>
@@ -67,102 +60,13 @@ export default function Experience({ darkMode }) {
                         Pengalaman Magang &amp; Rekam Jejak Industri
                     </h2>
                     <p className={`text-base sm:text-lg ${darkMode ? 'text-slate-400' : 'text-slate-600'}`}>
-                        Rekam jejak pelaksanaan program magang dan proyek nyata di BUMN PT. Pindad (Persero), RSU Pindad, dan industri teknologi, didukung dokumentasi visual empiris dan sertifikat verifikasi resmi.
+                        Rekam jejak pelaksanaan program magang resmi di BUMN PT. Pindad (Persero) Bandung sebagai Fullstack Developer, didukung dokumentasi visual sistem dan surat keputusan kelulusan prakerin resmi.
                     </p>
                 </div>
 
-                {/* Filter Selector */}
-                <div className="flex flex-wrap justify-center gap-2 mb-12">
-                    <button
-                        onClick={() => setFilter('all')}
-                        className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all ${
-                            filter === 'all'
-                                ? 'bg-gradient-to-r from-indigo-600 to-sky-500 text-white shadow-md shadow-indigo-500/25'
-                                : darkMode
-                                ? 'bg-slate-900/60 text-slate-400 hover:text-white border border-slate-800'
-                                : 'bg-white text-slate-600 hover:text-slate-900 border border-slate-200'
-                        }`}
-                    >
-                        Semua Magang ({experiences.length})
-                    </button>
-                    <button
-                        onClick={() => setFilter('software')}
-                        className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all flex items-center gap-1.5 ${
-                            filter === 'software'
-                                ? 'bg-gradient-to-r from-indigo-600 to-sky-500 text-white shadow-md shadow-indigo-500/25'
-                                : darkMode
-                                ? 'bg-slate-900/60 text-slate-400 hover:text-white border border-slate-800'
-                                : 'bg-white text-slate-600 hover:text-slate-900 border border-slate-200'
-                        }`}
-                    >
-                        <Briefcase className="w-3.5 h-3.5" />
-                        <span>Software &amp; AI Magang</span>
-                    </button>
-                    <button
-                        onClick={() => setFilter('hardware')}
-                        className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all flex items-center gap-1.5 ${
-                            filter === 'hardware'
-                                ? 'bg-gradient-to-r from-indigo-600 to-sky-500 text-white shadow-md shadow-indigo-500/25'
-                                : darkMode
-                                ? 'bg-slate-900/60 text-slate-400 hover:text-white border border-slate-800'
-                                : 'bg-white text-slate-600 hover:text-slate-900 border border-slate-200'
-                        }`}
-                    >
-                        <Briefcase className="w-3.5 h-3.5" />
-                        <span>IT Support &amp; Hardware</span>
-                    </button>
-                    <button
-                        onClick={() => setFilter('certifications')}
-                        className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all flex items-center gap-1.5 ${
-                            filter === 'certifications'
-                                ? 'bg-gradient-to-r from-indigo-600 to-sky-500 text-white shadow-md shadow-indigo-500/25'
-                                : darkMode
-                                ? 'bg-slate-900/60 text-slate-400 hover:text-white border border-slate-800'
-                                : 'bg-white text-slate-600 hover:text-slate-900 border border-slate-200'
-                        }`}
-                    >
-                        <Award className="w-3.5 h-3.5" />
-                        <span>Sertifikasi &amp; SK Prakerin</span>
-                    </button>
-                </div>
-
-                {/* Certifications Grid (if selected) */}
-                {filter === 'certifications' ? (
-                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-                        {certifications.map((cert, index) => (
-                            <div
-                                key={index}
-                                className={`p-6 rounded-3xl border transition-all duration-300 hover:-translate-y-1.5 ${
-                                    darkMode
-                                        ? 'bg-slate-900/50 border-slate-800 hover:border-indigo-500/50 hover:bg-slate-900/80 shadow-lg shadow-black/20'
-                                        : 'bg-white border-slate-200 hover:border-indigo-300 hover:shadow-xl shadow-slate-100'
-                                }`}
-                            >
-                                <div className="w-10 h-10 rounded-2xl bg-indigo-500/15 text-indigo-400 flex items-center justify-center mb-4">
-                                    <Award className="w-5 h-5" />
-                                </div>
-                                <div className="inline-block px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 mb-2">
-                                    {cert.status}
-                                </div>
-                                <h3 className={`text-base font-bold mb-1 ${darkMode ? 'text-white' : 'text-slate-900'}`}>
-                                    {cert.title}
-                                </h3>
-                                <div className="text-xs font-semibold text-indigo-400 mb-2">
-                                    {cert.issuer}
-                                </div>
-                                <div className="text-xs text-slate-400 font-mono mb-3">
-                                    {cert.period}
-                                </div>
-                                <p className={`text-xs leading-relaxed ${darkMode ? 'text-slate-400' : 'text-slate-600'}`}>
-                                    {cert.desc}
-                                </p>
-                            </div>
-                        ))}
-                    </div>
-                ) : (
-                    /* Vertical Timeline */
-                    <div className="relative pl-6 sm:pl-8 border-l-2 border-indigo-500/30 space-y-12">
-                        {filtered.map((item, index) => {
+                {/* Vertical Timeline */}
+                <div className="relative pl-6 sm:pl-8 border-l-2 border-indigo-500/30 space-y-12">
+                    {experiences.map((item, index) => {
                             return (
                                 <div key={item.id || index} className="relative group">
                                     {/* Timeline Dot */}
@@ -376,7 +280,6 @@ export default function Experience({ darkMode }) {
                             );
                         })}
                     </div>
-                )}
             </div>
 
             {/* LIGHTBOX MODAL UNTUK PREVIEW DOKUMENTASI */}
