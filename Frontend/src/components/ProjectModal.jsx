@@ -13,13 +13,13 @@ function GithubIcon({ className = "w-4 h-4" }) {
 function getCategoryIcon(cat) {
     switch (cat) {
         case 'ai':
-            return <Cpu className="w-5 h-5 text-sky-400" />;
+            return <Cpu className="w-5 h-5 text-red-500" />;
         case 'fullstack':
-            return <Layers className="w-5 h-5 text-emerald-400" />;
+            return <Layers className="w-5 h-5 text-rose-500" />;
         case 'data':
-            return <BarChart3 className="w-5 h-5 text-amber-400" />;
+            return <BarChart3 className="w-5 h-5 text-amber-500" />;
         default:
-            return <Code2 className="w-5 h-5 text-indigo-400" />;
+            return <Code2 className="w-5 h-5 text-red-500" />;
     }
 }
 
@@ -60,26 +60,26 @@ export default function ProjectModal({ project, isOpen, onClose, darkMode }) {
             <div
                 className={`relative w-full max-w-3xl rounded-3xl border overflow-hidden shadow-2xl transition-all z-10 my-6 ${
                     darkMode
-                        ? 'bg-slate-900 border-slate-700/80 text-slate-100 shadow-indigo-500/10'
+                        ? 'bg-zinc-900 border-zinc-700/80 text-slate-100 shadow-red-500/10'
                         : 'bg-white border-slate-200 text-slate-900 shadow-slate-400/30'
                 }`}
                 onClick={(e) => e.stopPropagation()}
             >
                 {/* Modal Header */}
                 <div className={`p-6 sm:p-8 border-b ${
-                    darkMode ? 'border-slate-800 bg-slate-950/40' : 'border-slate-100 bg-slate-50/70'
+                    darkMode ? 'border-zinc-800 bg-zinc-950/40' : 'border-slate-100 bg-slate-50/70'
                 }`}>
                     <div className="flex items-start justify-between gap-4">
                         <div className="flex items-center gap-3">
                             <div className={`w-12 h-12 rounded-2xl flex items-center justify-center shrink-0 border ${
                                 darkMode 
-                                    ? 'bg-slate-800 border-slate-700 text-indigo-400' 
-                                    : 'bg-white border-slate-200 text-indigo-600 shadow-sm'
+                                    ? 'bg-zinc-800 border-zinc-700 text-red-400' 
+                                    : 'bg-white border-slate-200 text-red-600 shadow-sm'
                             }`}>
                                 {getCategoryIcon(project.category)}
                             </div>
                             <div>
-                                <span className="inline-block px-3 py-0.5 rounded-full text-xs font-bold uppercase tracking-wider bg-indigo-500/15 text-indigo-400 border border-indigo-500/25 mb-1">
+                                <span className="inline-block px-3 py-0.5 rounded-full text-xs font-bold uppercase tracking-wider bg-red-500/15 text-red-600 dark:text-red-400 border border-red-500/25 mb-1">
                                     {project.categoryLabel || project.category}
                                 </span>
                                 <h3 className={`text-xl sm:text-2xl font-black ${darkMode ? 'text-white' : 'text-slate-900'}`}>
@@ -93,7 +93,7 @@ export default function ProjectModal({ project, isOpen, onClose, darkMode }) {
                             onClick={onClose}
                             className={`p-2 rounded-full transition-colors ${
                                 darkMode 
-                                    ? 'hover:bg-slate-800 text-slate-400 hover:text-white' 
+                                    ? 'hover:bg-zinc-800 text-slate-400 hover:text-white' 
                                     : 'hover:bg-slate-200 text-slate-500 hover:text-slate-900'
                             }`}
                             aria-label="Tutup rincian proyek"
@@ -103,7 +103,7 @@ export default function ProjectModal({ project, isOpen, onClose, darkMode }) {
                     </div>
 
                     {project.highlight && (
-                        <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg text-xs font-semibold mt-4 bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">
+                        <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg text-xs font-semibold mt-4 bg-red-500/10 text-red-600 dark:text-red-400 border border-red-500/20">
                             <Sparkles className="w-3.5 h-3.5 shrink-0" />
                             <span>{project.highlight}</span>
                         </div>
@@ -115,7 +115,7 @@ export default function ProjectModal({ project, isOpen, onClose, darkMode }) {
                     {/* Key Metrics */}
                     {project.metrics && (
                         <div>
-                            <h4 className="text-xs uppercase font-bold tracking-wider text-indigo-400 mb-2.5">
+                            <h4 className="text-xs uppercase font-bold tracking-wider text-red-600 dark:text-red-400 mb-2.5">
                                 Metrik &amp; Karakteristik Utama
                             </h4>
                             <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
@@ -124,8 +124,8 @@ export default function ProjectModal({ project, isOpen, onClose, darkMode }) {
                                         key={idx}
                                         className={`p-3 rounded-2xl border text-center font-mono font-bold text-xs ${
                                             darkMode 
-                                                ? 'bg-slate-950/60 border-slate-800 text-indigo-300' 
-                                                : 'bg-indigo-50/50 border-indigo-100 text-indigo-900'
+                                                ? 'bg-zinc-950/60 border-zinc-800 text-red-300' 
+                                                : 'bg-red-50/60 border-red-100 text-red-900'
                                         }`}
                                     >
                                         {metric}
@@ -137,7 +137,7 @@ export default function ProjectModal({ project, isOpen, onClose, darkMode }) {
 
                     {/* Summary */}
                     <div>
-                        <h4 className="text-xs uppercase font-bold tracking-wider text-indigo-400 mb-2">
+                        <h4 className="text-xs uppercase font-bold tracking-wider text-red-600 dark:text-red-400 mb-2">
                             Ikhtisar Proyek
                         </h4>
                         <p className={`text-sm sm:text-base leading-relaxed ${darkMode ? 'text-slate-300' : 'text-slate-600'}`}>
@@ -149,7 +149,7 @@ export default function ProjectModal({ project, isOpen, onClose, darkMode }) {
                     {project.gallery && project.gallery.length > 0 && (
                         <div>
                             <div className="flex items-center justify-between mb-3">
-                                <h4 className="text-xs uppercase font-bold tracking-wider text-indigo-400 flex items-center gap-1.5">
+                                <h4 className="text-xs uppercase font-bold tracking-wider text-red-600 dark:text-red-400 flex items-center gap-1.5">
                                     <ImageIcon className="w-3.5 h-3.5" />
                                     <span>Tangkapan Layar &amp; Visualisasi Asli</span>
                                 </h4>
@@ -160,7 +160,7 @@ export default function ProjectModal({ project, isOpen, onClose, darkMode }) {
 
                             {/* Main Preview */}
                             <div className={`relative rounded-2xl overflow-hidden border mb-3 ${
-                                darkMode ? 'bg-slate-950 border-slate-800' : 'bg-slate-100 border-slate-200'
+                                darkMode ? 'bg-slate-950 border-zinc-800' : 'bg-slate-100 border-slate-200'
                             }`}>
                                 <div className="max-h-[320px] sm:max-h-[380px] overflow-hidden flex items-center justify-center p-2 bg-slate-950">
                                     <img
@@ -170,14 +170,14 @@ export default function ProjectModal({ project, isOpen, onClose, darkMode }) {
                                     />
                                 </div>
                                 <div className={`p-3 px-4 text-xs font-medium border-t flex items-center justify-between ${
-                                    darkMode ? 'bg-slate-900/90 border-slate-800 text-slate-200' : 'bg-white/95 border-slate-200 text-slate-700'
+                                    darkMode ? 'bg-zinc-900/90 border-zinc-800 text-slate-200' : 'bg-white/95 border-slate-200 text-slate-700'
                                 }`}>
                                     <span className="truncate pr-3">{project.gallery[activeImageIdx]?.caption}</span>
                                     <a
                                         href={project.gallery[activeImageIdx]?.url}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="text-indigo-400 hover:text-indigo-300 inline-flex items-center gap-1 font-semibold text-[11px] shrink-0"
+                                        className="text-red-600 dark:text-red-400 hover:underline inline-flex items-center gap-1 font-semibold text-[11px] shrink-0"
                                     >
                                         <span>Buka Gambar Penuh</span>
                                         <ExternalLink className="w-3 h-3" />
@@ -193,7 +193,7 @@ export default function ProjectModal({ project, isOpen, onClose, darkMode }) {
                                         onClick={() => setActiveImageIdx(idx)}
                                         className={`relative rounded-xl overflow-hidden border-2 shrink-0 transition-all ${
                                             activeImageIdx === idx
-                                                ? 'border-indigo-500 scale-105 shadow-md shadow-indigo-500/25'
+                                                ? 'border-red-600 scale-105 shadow-md shadow-red-600/25'
                                                 : 'border-transparent opacity-60 hover:opacity-100'
                                         }`}
                                     >
@@ -211,13 +211,13 @@ export default function ProjectModal({ project, isOpen, onClose, darkMode }) {
                     {/* Features Breakdown */}
                     {project.features && (
                         <div>
-                            <h4 className="text-xs uppercase font-bold tracking-wider text-indigo-400 mb-3">
+                            <h4 className="text-xs uppercase font-bold tracking-wider text-red-600 dark:text-red-400 mb-3">
                                 Fitur &amp; Implementasi Rekayasa
                             </h4>
                             <div className="space-y-2.5">
                                 {project.features.map((feat, idx) => (
                                     <div key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm">
-                                        <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                                        <CheckCircle2 className="w-4 h-4 text-rose-500 shrink-0 mt-0.5" />
                                         <span className={darkMode ? 'text-slate-300' : 'text-slate-600'}>
                                             {feat}
                                         </span>
@@ -229,7 +229,7 @@ export default function ProjectModal({ project, isOpen, onClose, darkMode }) {
 
                     {/* Tech Badges */}
                     <div>
-                        <h4 className="text-xs uppercase font-bold tracking-wider text-indigo-400 mb-2.5">
+                        <h4 className="text-xs uppercase font-bold tracking-wider text-red-600 dark:text-red-400 mb-2.5">
                             Teknologi &amp; Alat yang Digunakan
                         </h4>
                         <div className="flex flex-wrap gap-2">
@@ -238,7 +238,7 @@ export default function ProjectModal({ project, isOpen, onClose, darkMode }) {
                                     key={idx}
                                     className={`px-3 py-1 rounded-xl text-xs font-mono font-semibold border ${
                                         darkMode
-                                            ? 'bg-slate-800/80 border-slate-700 text-indigo-300'
+                                            ? 'bg-zinc-800/80 border-zinc-700 text-red-300'
                                             : 'bg-slate-100 border-slate-200 text-slate-800'
                                     }`}
                                 >
@@ -251,7 +251,7 @@ export default function ProjectModal({ project, isOpen, onClose, darkMode }) {
 
                 {/* Modal Footer with Actions */}
                 <div className={`p-5 sm:px-8 border-t flex flex-wrap items-center justify-between gap-3 ${
-                    darkMode ? 'bg-slate-950/40 border-slate-800' : 'bg-slate-50 border-slate-200'
+                    darkMode ? 'bg-zinc-950/40 border-zinc-800' : 'bg-slate-50 border-slate-200'
                 }`}>
                     <div className="flex flex-wrap items-center gap-2">
                         {project.githubUrl && (
@@ -259,9 +259,9 @@ export default function ProjectModal({ project, isOpen, onClose, darkMode }) {
                                 href={project.githubUrl}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold bg-slate-800 hover:bg-slate-700 text-white border border-slate-700 transition-colors shadow-sm"
+                                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold bg-zinc-800 hover:bg-zinc-700 text-white border border-zinc-700 transition-colors shadow-sm"
                             >
-                                <GithubIcon className="w-4 h-4 text-indigo-400" />
+                                <GithubIcon className="w-4 h-4 text-red-400" />
                                 <span>Lihat Repositori GitHub</span>
                                 <ExternalLink className="w-3 h-3 text-slate-400" />
                             </a>
@@ -272,7 +272,7 @@ export default function ProjectModal({ project, isOpen, onClose, darkMode }) {
                                 href={project.docUrl}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold bg-indigo-500/10 hover:bg-indigo-500/20 text-indigo-400 border border-indigo-500/30 transition-colors"
+                                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold bg-red-500/10 hover:bg-red-500/20 text-red-400 border border-red-500/30 transition-colors"
                             >
                                 <FileText className="w-4 h-4" />
                                 <span>Dokumen Resmi Terverifikasi</span>
@@ -283,7 +283,7 @@ export default function ProjectModal({ project, isOpen, onClose, darkMode }) {
 
                     <button
                         onClick={onClose}
-                        className="px-5 py-2 rounded-xl text-xs font-bold bg-indigo-600 hover:bg-indigo-500 text-white transition-colors shadow-sm ml-auto"
+                        className="px-5 py-2 rounded-xl text-xs font-bold bg-red-600 hover:bg-red-500 text-white transition-colors shadow-sm ml-auto"
                     >
                         Tutup Rincian
                     </button>

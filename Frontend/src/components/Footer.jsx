@@ -11,21 +11,21 @@ export default function Footer({ darkMode }) {
     return (
         <footer className={`border-t transition-colors ${
             darkMode
-                ? 'bg-[#060910] border-slate-800/80 text-slate-400'
-                : 'bg-slate-100 border-slate-200 text-slate-600'
+                ? 'bg-[#08080a] border-zinc-800/80 text-slate-400'
+                : 'bg-slate-50 border-slate-200 text-slate-600'
         }`}>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
                 <div className="flex flex-col md:flex-row items-center justify-between gap-6">
                     {/* Brand & Tagline */}
                     <div className="flex items-center gap-3 text-center md:text-left">
-                        <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 to-sky-400 text-white font-black flex items-center justify-center shadow-md">
+                        <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-red-600 to-rose-600 text-white font-black flex items-center justify-center shadow-md">
                             RF
                         </div>
                         <div>
                             <div className={`font-bold text-base ${darkMode ? 'text-white' : 'text-slate-900'}`}>
                                 {personalInfo.name}
                             </div>
-                            <div className="text-xs text-indigo-400">
+                            <div className="text-xs text-red-600 dark:text-red-400 font-medium">
                                 {personalInfo.title}
                             </div>
                         </div>
@@ -34,11 +34,11 @@ export default function Footer({ darkMode }) {
                     {/* Tech Badge */}
                     <div className="flex items-center gap-2 text-xs font-medium">
                         <span>Dibangun dengan</span>
-                        <span className="font-semibold text-sky-400">React</span>
+                        <span className="font-semibold text-red-600 dark:text-red-400">React</span>
                         <span>&bull;</span>
-                        <span className="font-semibold text-rose-400">Laravel</span>
+                        <span className="font-semibold text-red-600 dark:text-red-400">Laravel</span>
                         <span>&bull;</span>
-                        <span className="font-semibold text-teal-400">Tailwind CSS</span>
+                        <span className="font-semibold text-red-600 dark:text-red-400">Tailwind CSS</span>
                     </div>
 
                     {/* Socials & Back to Top */}
@@ -48,7 +48,7 @@ export default function Footer({ darkMode }) {
                                 href={personalInfo.socialLinks.github}
                                 target="_blank"
                                 rel="noreferrer"
-                                className="p-2 rounded-lg hover:text-white transition-colors"
+                                className="p-2 rounded-lg hover:text-red-600 dark:hover:text-red-400 transition-colors"
                                 aria-label="GitHub"
                             >
                                 <GithubIcon className="w-4 h-4" />
@@ -57,7 +57,7 @@ export default function Footer({ darkMode }) {
                                 href={personalInfo.socialLinks.linkedin}
                                 target="_blank"
                                 rel="noreferrer"
-                                className="p-2 rounded-lg hover:text-white transition-colors"
+                                className="p-2 rounded-lg hover:text-red-600 dark:hover:text-red-400 transition-colors"
                                 aria-label="LinkedIn"
                             >
                                 <LinkedinIcon className="w-4 h-4" />
@@ -68,8 +68,8 @@ export default function Footer({ darkMode }) {
                             onClick={scrollToTop}
                             className={`p-2.5 rounded-xl border transition-all ${
                                 darkMode
-                                    ? 'border-slate-800 bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white hover:border-slate-700'
-                                    : 'border-slate-300 bg-white hover:bg-slate-50 text-slate-700'
+                                    ? 'border-zinc-800 bg-zinc-900 hover:bg-zinc-800 text-slate-300 hover:text-white hover:border-red-500/40'
+                                    : 'border-slate-300 bg-white hover:bg-slate-50 text-slate-700 hover:border-red-300 hover:text-red-600'
                             }`}
                             title="Kembali ke Atas"
                         >

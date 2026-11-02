@@ -44,11 +44,11 @@ function MarqueeStrip({ tools, reverse = false, darkMode }) {
             {/* fade edges */}
             <div
                 className="absolute left-0 top-0 h-full w-16 z-10 pointer-events-none"
-                style={{ background: `linear-gradient(to right, ${darkMode ? '#090d16' : '#f8fafc'}, transparent)` }}
+                style={{ background: `linear-gradient(to right, ${darkMode ? '#0b0c10' : '#ffffff'}, transparent)` }}
             />
             <div
                 className="absolute right-0 top-0 h-full w-16 z-10 pointer-events-none"
-                style={{ background: `linear-gradient(to left, ${darkMode ? '#090d16' : '#f8fafc'}, transparent)` }}
+                style={{ background: `linear-gradient(to left, ${darkMode ? '#0b0c10' : '#ffffff'}, transparent)` }}
             />
 
             <div className={`flex gap-4 w-max ${reverse ? 'animate-marquee-reverse' : 'animate-marquee'}`}>
@@ -60,13 +60,13 @@ function MarqueeStrip({ tools, reverse = false, darkMode }) {
                             transition-all duration-300 hover:scale-110 cursor-default select-none shrink-0
                             backdrop-blur-md
                             ${darkMode
-                                ? 'bg-white/5 border-white/10 hover:bg-white/10 hover:border-indigo-500/50'
-                                : 'bg-white/90 border-slate-200/90 hover:border-indigo-400 hover:bg-white shadow-[0_2px_12px_rgba(99,102,241,0.08)] hover:shadow-[0_8px_24px_rgba(99,102,241,0.18)]'}
+                                ? 'bg-white/5 border-white/10 hover:bg-white/10 hover:border-red-500/50'
+                                : 'bg-white/90 border-slate-200/90 hover:border-red-400 hover:bg-white shadow-[0_2px_12px_rgba(220,38,38,0.06)] hover:shadow-[0_8px_24px_rgba(220,38,38,0.12)]'}
                         `}
                         style={{
                             boxShadow: darkMode
-                                ? '0 2px 16px rgba(99,102,241,0.10), inset 0 1px 0 rgba(255,255,255,0.08)'
-                                : '0 4px 16px rgba(99,102,241,0.08), inset 0 1px 0 rgba(255,255,255,1)',
+                                ? '0 2px 16px rgba(220,38,38,0.08), inset 0 1px 0 rgba(255,255,255,0.08)'
+                                : '0 4px 16px rgba(220,38,38,0.06), inset 0 1px 0 rgba(255,255,255,1)',
                         }}
                     >
                         <img
@@ -95,13 +95,13 @@ export default function Skills({ darkMode }) {
                 {/* Header */}
                 <div className="text-center max-w-3xl mx-auto mb-14">
                     <div className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold mb-3 ${
-                        darkMode ? 'bg-indigo-500/10 border border-indigo-500/20 text-indigo-400' : 'bg-indigo-50 border border-indigo-200 text-indigo-700 shadow-sm'
+                        darkMode ? 'bg-red-500/10 border border-red-500/20 text-red-400' : 'bg-red-50 border border-red-200 text-red-700 shadow-sm'
                     }`}>
                         <Cpu className="w-3.5 h-3.5" />
                         <span>TEKNOLOGI &amp; TOOLS</span>
                     </div>
                     <h2 className={`text-3xl sm:text-4xl font-extrabold tracking-tight mb-4 ${
-                        darkMode ? 'text-white' : 'bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-800 bg-clip-text text-transparent'
+                        darkMode ? 'text-white' : 'bg-gradient-to-r from-slate-900 via-red-950 to-slate-800 bg-clip-text text-transparent'
                     }`}>
                         Tech Stack yang Saya Gunakan
                     </h2>
@@ -113,11 +113,11 @@ export default function Skills({ darkMode }) {
                 {/* ── Web Developer Strip ── */}
                 <div className="mb-10">
                     <div className="flex items-center gap-3 mb-5">
-                        <span className={`h-px flex-1 ${darkMode ? 'bg-slate-800' : 'bg-slate-200'}`} />
-                        <span className="px-4 py-1 rounded-full text-xs font-bold tracking-widest uppercase border border-indigo-500/30 text-indigo-400 bg-indigo-500/10">
+                        <span className={`h-px flex-1 ${darkMode ? 'bg-zinc-800' : 'bg-slate-200'}`} />
+                        <span className="px-4 py-1 rounded-full text-xs font-bold tracking-widest uppercase border border-red-500/30 text-red-600 dark:text-red-400 bg-red-500/10">
                             Web Developer
                         </span>
-                        <span className={`h-px flex-1 ${darkMode ? 'bg-slate-800' : 'bg-slate-200'}`} />
+                        <span className={`h-px flex-1 ${darkMode ? 'bg-zinc-800' : 'bg-slate-200'}`} />
                     </div>
                     <MarqueeStrip tools={webDevTools} reverse={false} darkMode={darkMode} />
                 </div>
@@ -125,11 +125,11 @@ export default function Skills({ darkMode }) {
                 {/* ── Data Analysis Strip ── */}
                 <div>
                     <div className="flex items-center gap-3 mb-5">
-                        <span className={`h-px flex-1 ${darkMode ? 'bg-slate-800' : 'bg-slate-200'}`} />
-                        <span className="px-4 py-1 rounded-full text-xs font-bold tracking-widest uppercase border border-emerald-500/30 text-emerald-400 bg-emerald-500/10">
+                        <span className={`h-px flex-1 ${darkMode ? 'bg-zinc-800' : 'bg-slate-200'}`} />
+                        <span className="px-4 py-1 rounded-full text-xs font-bold tracking-widest uppercase border border-amber-500/30 text-amber-500 dark:text-amber-400 bg-amber-500/10">
                             Data Analysis
                         </span>
-                        <span className={`h-px flex-1 ${darkMode ? 'bg-slate-800' : 'bg-slate-200'}`} />
+                        <span className={`h-px flex-1 ${darkMode ? 'bg-zinc-800' : 'bg-slate-200'}`} />
                     </div>
                     <MarqueeStrip tools={dataAnalysisTools} reverse={true} darkMode={darkMode} />
                 </div>

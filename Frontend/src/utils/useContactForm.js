@@ -52,7 +52,7 @@ export function useContactForm() {
                 particleCount: 85,
                 spread: 75,
                 origin: { y: 0.65 },
-                colors: ['#6366f1', '#38bdf8', '#10b981', '#f59e0b'],
+                colors: ['#dc2626', '#ef4444', '#f59e0b', '#fbbf24', '#ffffff'],
             });
         } catch (e) {
             // Abaikan jika canvas tidak tersedia

@@ -43,11 +43,11 @@ export default function Navbar({ darkMode, setDarkMode, onOpenCv }) {
         };
 
     const glassBtnCTA = {
-        background: 'linear-gradient(135deg, rgba(99,102,241,0.85) 0%, rgba(14,165,233,0.75) 100%)',
+        background: 'linear-gradient(135deg, rgba(220,38,38,0.95) 0%, rgba(185,28,28,0.92) 75%, rgba(217,119,6,0.85) 100%)',
         backdropFilter: 'blur(12px)',
         WebkitBackdropFilter: 'blur(12px)',
-        border: '1px solid rgba(255,255,255,0.20)',
-        boxShadow: '0 4px 20px rgba(99,102,241,0.35), inset 0 1px 0 rgba(255,255,255,0.25)',
+        border: '1px solid rgba(255,255,255,0.30)',
+        boxShadow: '0 4px 18px rgba(220,38,38,0.30), inset 0 1px 0 rgba(255,255,255,0.25)',
     };
 
     return (
@@ -55,8 +55,8 @@ export default function Navbar({ darkMode, setDarkMode, onOpenCv }) {
             className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
                 scrolled
                     ? darkMode
-                        ? 'bg-[#090d16]/85 backdrop-blur-md border-b border-slate-800/80 shadow-lg shadow-black/20'
-                        : 'bg-white/85 backdrop-blur-md border-b border-slate-200/80 shadow-md'
+                        ? 'bg-[#0b0c10]/85 backdrop-blur-md border-b border-zinc-800/80 shadow-lg shadow-black/20'
+                        : 'bg-white/90 backdrop-blur-md border-b border-slate-200/80 shadow-sm'
                     : 'bg-transparent py-2'
             }`}
         >
@@ -72,7 +72,7 @@ export default function Navbar({ darkMode, setDarkMode, onOpenCv }) {
                         <div
                             className="relative w-10 h-10 rounded-xl overflow-hidden group-hover:scale-105 transition-transform duration-300 shrink-0"
                             style={{
-                                boxShadow: '0 0 0 2px rgba(99,102,241,0.6), 0 4px 16px rgba(99,102,241,0.30), inset 0 1px 0 rgba(255,255,255,0.15)',
+                                boxShadow: '0 0 0 2px rgba(220,38,38,0.6), 0 4px 16px rgba(220,38,38,0.25), inset 0 1px 0 rgba(255,255,255,0.15)',
                             }}
                         >
                             <img
@@ -81,14 +81,14 @@ export default function Navbar({ darkMode, setDarkMode, onOpenCv }) {
                                 className="w-full h-full object-cover object-top"
                             />
                             {/* online dot */}
-                            <span className="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 bg-emerald-400 rounded-full border-2 border-[#090d16] z-10" />
+                            <span className="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 bg-red-500 rounded-full border-2 border-white dark:border-[#0b0c10] z-10" />
                         </div>
 
                         <div>
                             <span className={`font-extrabold text-base sm:text-lg tracking-tight block leading-tight ${darkMode ? 'text-white' : 'text-slate-900'}`}>
                                 {personalInfo.name}
                             </span>
-                            <span className="text-[11px] font-medium tracking-wider uppercase text-sky-400 flex items-center gap-1">
+                            <span className="text-[11px] font-medium tracking-wider uppercase text-red-600 dark:text-red-400 flex items-center gap-1">
                                 <Sparkles className="w-2.5 h-2.5 inline" /> Data &amp; AI Dev
                             </span>
                         </div>
@@ -102,9 +102,9 @@ export default function Navbar({ darkMode, setDarkMode, onOpenCv }) {
                                 onClick={() => handleNavClick(link.id)}
                                 className={`relative px-3.5 py-1.5 rounded-lg text-sm font-medium transition-all duration-200 ${
                                     activeSection === link.id
-                                        ? 'text-indigo-400 font-semibold'
+                                        ? 'text-red-600 dark:text-red-400 font-semibold'
                                         : darkMode
-                                        ? 'text-slate-300 hover:text-white hover:bg-slate-800/50'
+                                        ? 'text-slate-300 hover:text-white hover:bg-zinc-800/50'
                                         : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100/60'
                                 }`}
                             >
@@ -112,14 +112,14 @@ export default function Navbar({ darkMode, setDarkMode, onOpenCv }) {
                                     <span
                                         className={`absolute inset-0 rounded-lg -z-10 ${
                                             darkMode
-                                                ? 'bg-gradient-to-r from-indigo-500/15 via-sky-500/15 to-purple-500/15 border border-indigo-500/30'
-                                                : 'bg-indigo-50 border border-indigo-200'
+                                                ? 'bg-red-500/10 border border-red-500/25'
+                                                : 'bg-red-50 border border-red-200'
                                         }`}
                                     />
                                 )}
                                 {link.label}
                                 {activeSection === link.id && (
-                                    <span className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-4 h-0.5 rounded-full bg-gradient-to-r from-indigo-500 to-sky-400 shadow-[0_0_8px_rgba(99,102,241,0.9)]" />
+                                    <span className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-4 h-0.5 rounded-full bg-gradient-to-r from-red-600 to-rose-500 shadow-[0_0_8px_rgba(220,38,38,0.5)]" />
                                 )}
                             </button>
                         ))}
@@ -193,7 +193,7 @@ export default function Navbar({ darkMode, setDarkMode, onOpenCv }) {
             {mobileMenuOpen && (
                 <div
                     className={`sm:hidden border-b px-4 pt-2 pb-6 space-y-1 ${
-                        darkMode ? 'bg-[#090d16]/95 border-slate-800 text-slate-200' : 'bg-white/95 border-slate-200 text-slate-800'
+                        darkMode ? 'bg-[#0b0c10]/95 border-zinc-800 text-slate-200' : 'bg-white/95 border-slate-200 text-slate-800'
                     }`}
                     style={{ backdropFilter: 'blur(20px)', WebkitBackdropFilter: 'blur(20px)' }}
                 >
@@ -203,9 +203,9 @@ export default function Navbar({ darkMode, setDarkMode, onOpenCv }) {
                             onClick={() => handleNavClick(link.id)}
                             className={`w-full text-left px-4 py-2.5 rounded-xl text-sm font-medium transition-all ${
                                 activeSection === link.id
-                                    ? 'text-indigo-400 bg-indigo-500/10 font-semibold'
+                                    ? 'text-red-600 dark:text-red-400 bg-red-500/10 font-semibold'
                                     : darkMode
-                                    ? 'hover:bg-slate-800/60 text-slate-300'
+                                    ? 'hover:bg-zinc-800/60 text-slate-300'
                                     : 'hover:bg-slate-100 text-slate-700'
                             }`}
                         >
@@ -237,7 +237,7 @@ export default function Navbar({ darkMode, setDarkMode, onOpenCv }) {
             {/* ── Glowing Scroll Progress Bar ── */}
             <div className="absolute bottom-0 left-0 right-0 h-[2.5px] bg-transparent overflow-hidden">
                 <div
-                    className="h-full bg-gradient-to-r from-indigo-500 via-sky-400 to-emerald-400 transition-[width] duration-150 ease-out shadow-[0_0_12px_rgba(99,102,241,0.9)]"
+                    className="h-full bg-gradient-to-r from-red-600 via-rose-500 to-amber-400 transition-[width] duration-150 ease-out shadow-[0_0_8px_rgba(220,38,38,0.5)]"
                     style={{ width: `${scrollProgress}%` }}
                 />
             </div>

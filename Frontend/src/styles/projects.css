@@ -79,8 +79,8 @@
 .folder-card-item:hover {
     transform: translateY(-88px) scale(1.1) !important;
     z-index: 25 !important;
-    box-shadow: 0 24px 44px -8px rgba(79, 70, 229, 0.4) !important;
-    border-color: rgba(99, 102, 241, 0.7) !important;
+    box-shadow: 0 24px 44px -8px rgba(220, 38, 38, 0.3) !important;
+    border-color: rgba(239, 68, 68, 0.7) !important;
 }
 
 /* Card Outer Glow */

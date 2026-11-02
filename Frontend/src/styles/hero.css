@@ -43,13 +43,13 @@
 /* Dark mode kinetic typography */
 .hero-marquee-track-1 {
     font-size: clamp(3.5rem, 8vw, 8.5rem);
-    color: rgba(129, 140, 248, 0.12);
+    color: rgba(239, 68, 68, 0.08);
     animation: marquee-left 32s linear infinite;
 }
 
 .hero-marquee-track-2 {
     font-size: clamp(3.5rem, 8vw, 8.5rem);
-    color: rgba(56, 189, 248, 0.12);
+    color: rgba(255, 255, 255, 0.06);
     animation: marquee-right 32s linear infinite;
 }
 
@@ -59,13 +59,13 @@
 }
 
 :root:not(.dark) .hero-marquee-track-1 {
-    color: rgba(99, 102, 241, 0.04);
-    -webkit-text-stroke: 1.5px rgba(99, 102, 241, 0.18);
+    color: rgba(220, 38, 38, 0.03);
+    -webkit-text-stroke: 1.5px rgba(220, 38, 38, 0.15);
 }
 
 :root:not(.dark) .hero-marquee-track-2 {
-    color: rgba(14, 165, 233, 0.04);
-    -webkit-text-stroke: 1.5px rgba(14, 165, 233, 0.18);
+    color: rgba(185, 28, 28, 0.02);
+    -webkit-text-stroke: 1.5px rgba(185, 28, 28, 0.12);
 }
 
 /* 3D Center Photo Card */
@@ -95,7 +95,7 @@
 
 :root:not(.dark) .hero-photo-card {
     border: 1px solid rgba(255, 255, 255, 0.9);
-    box-shadow: 0 25px 50px -12px rgba(99, 102, 241, 0.22), 0 0 0 1px rgba(99, 102, 241, 0.12);
+    box-shadow: 0 25px 50px -12px rgba(220, 38, 38, 0.15), 0 0 0 1px rgba(220, 38, 38, 0.1);
 }
 
 @media (min-width: 640px) {
@@ -142,7 +142,7 @@
 }
 
 :root:not(.dark) .hero-floating-badge {
-    box-shadow: 0 14px 30px -5px rgba(99, 102, 241, 0.18), 0 2px 6px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 14px 30px -5px rgba(220, 38, 38, 0.12), 0 2px 6px rgba(0, 0, 0, 0.04);
 }
 
 @media (min-width: 640px) {
@@ -165,26 +165,26 @@
     bottom: 4rem;
 }
 
-/* Glowing Halo */
+/* Glowing Halo (Merah Putih & Putih Gold Gradasi) */
 .hero-outer-glow {
     position: absolute;
     inset: -0.5rem;
-    background: linear-gradient(135deg, #0ea5e9, #6366f1, #a855f7);
+    background: linear-gradient(135deg, #ef4444, #f59e0b, #dc2626);
     border-radius: 2rem;
-    filter: blur(22px);
-    opacity: 0.55;
+    filter: blur(24px);
+    opacity: 0.35;
     transition: opacity 0.5s ease;
 }
 
 :root:not(.dark) .hero-outer-glow {
-    opacity: 0.35;
+    opacity: 0.2;
     filter: blur(32px);
 }
 
 .hero-photo-wrapper:hover .hero-outer-glow {
-    opacity: 0.85;
+    opacity: 0.55;
 }
 
 :root:not(.dark) .hero-photo-wrapper:hover .hero-outer-glow {
-    opacity: 0.6;
+    opacity: 0.35;
 }

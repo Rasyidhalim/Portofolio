@@ -14,15 +14,15 @@ const certificates = [
         issuerShort: "BNSP Indonesia",
         year: "2026 – 2029",
         status: "KOMPETEN",
-        statusType: "emerald",
+        statusType: "amber",
         credentialId: "63111 2521 6 0041241 2026",
         regNumber: "TIK.317.03533 2026",
         image: "/images/certificates/cert-bnsp.jpg",
         pdf: "/certificates/sertifikat-bnsp.pdf",
         category: "data-ai",
-        gradient: "from-amber-500/20 via-emerald-500/10 to-teal-500/20",
-        badgeBg: "bg-emerald-500/10 border-emerald-500/30 text-emerald-400",
-        borderColor: "hover:border-emerald-500/40",
+        gradient: "from-amber-500/25 via-yellow-500/15 to-amber-500/20",
+        badgeBg: "bg-amber-500/15 border-amber-500/35 text-amber-500 dark:text-amber-400",
+        borderColor: "hover:border-amber-500/50",
         skills: ["Data Analytics", "SQL & Database", "Python", "Power BI", "Data Wrangling", "Excel"],
         summary: "Sertifikasi kompetensi resmi negara dari Badan Nasional Sertifikasi Profesi (BNSP) Republik Indonesia bidang Data Analytics dengan kualifikasi Analis Data (Data Analyst). Berlaku resmi hingga September 2029.",
     },
@@ -33,15 +33,15 @@ const certificates = [
         issuerShort: "Google AI",
         year: "2026 – 2029",
         status: "OFFICIALLY CERTIFIED",
-        statusType: "sky",
+        statusType: "rose",
         credentialId: "GOOGLE-GEMINI-AI-2026",
         regNumber: "Issued: 27/08/2026",
         image: "/images/certificates/cert-ai.jpg",
         pdf: "/certificates/sertif-ai.pdf",
         category: "data-ai",
-        gradient: "from-sky-500/20 via-indigo-500/10 to-purple-500/20",
-        badgeBg: "bg-sky-500/10 border-sky-500/30 text-sky-400",
-        borderColor: "hover:border-sky-500/40",
+        gradient: "from-red-500/20 via-rose-500/10 to-amber-500/20",
+        badgeBg: "bg-red-500/10 border-red-500/30 text-red-400",
+        borderColor: "hover:border-red-500/40",
         skills: ["Google Gemini AI", "Prompt Engineering", "Large Language Models", "Generative AI"],
         summary: "Kualifikasi resmi dari Google for Education membuktikan penguasaan fundamental teknologi Google AI, kecerdasan buatan generatif, alur kerja prompt cerdas, dan integrasi model LLM.",
     },
@@ -52,15 +52,15 @@ const certificates = [
         issuerShort: "AP2SC UNIKOM",
         year: "2025 / 2026",
         status: "PREDIKAT: ISTIMEWA (90.62)",
-        statusType: "purple",
+        statusType: "red",
         credentialId: "UNIKOM-AP2SC-4127-2026",
         regNumber: "NIM: 10122150",
         image: "/images/certificates/cert-hardware.jpg",
         pdf: "/certificates/hardware.pdf",
         category: "systems",
-        gradient: "from-purple-500/20 via-indigo-500/10 to-pink-500/20",
-        badgeBg: "bg-purple-500/10 border-purple-500/30 text-purple-300",
-        borderColor: "hover:border-purple-500/40",
+        gradient: "from-zinc-500/20 via-red-500/10 to-rose-500/20",
+        badgeBg: "bg-red-500/10 border-red-500/30 text-red-300",
+        borderColor: "hover:border-red-500/40",
         skills: ["Networking (95)", "Instalasi OS (90)", "Troubleshooting (90)", "Merakit PC (87.5)"],
         summary: "Lulus dengan predikat 'Istimewa' (Nilai Rata-rata 90.62/100) dalam ujian komprehensif perakitan komputer, instalasi sistem operasi, konfigurasi jaringan komputer, dan troubleshooting hardware.",
     },
@@ -77,7 +77,7 @@ const certificates = [
         image: "/images/certificates/cert-pindad.jpg",
         pdf: "/certificates/surat-lulus-magang.pdf",
         category: "career",
-        gradient: "from-amber-500/20 via-orange-500/10 to-red-500/20",
+        gradient: "from-amber-500/20 via-red-500/10 to-rose-500/20",
         badgeBg: "bg-amber-500/10 border-amber-500/30 text-amber-400",
         borderColor: "hover:border-amber-500/40",
         skills: ["IT Warehouse Dashboard", "Inventory Tracking", "Database Management", "Fullstack Web"],
@@ -90,15 +90,15 @@ const certificates = [
         issuerShort: "UNIKOM LC",
         year: "2025 – 2027",
         status: "SKOR TOTAL: 437",
-        statusType: "teal",
+        statusType: "red",
         credentialId: "11.25.05005",
         regNumber: "Listening: 49 | Structure: 40 | Reading: 42",
         image: "/images/certificates/cert-toefl.jpg",
         pdf: "/certificates/toefl.pdf",
         category: "career",
-        gradient: "from-teal-500/20 via-cyan-500/10 to-indigo-500/20",
-        badgeBg: "bg-teal-500/10 border-teal-500/30 text-teal-400",
-        borderColor: "hover:border-teal-500/40",
+        gradient: "from-red-500/20 via-orange-500/10 to-amber-500/20",
+        badgeBg: "bg-red-500/10 border-red-500/30 text-red-400",
+        borderColor: "hover:border-red-500/40",
         skills: ["Technical English", "Listening Comprehension", "Reading", "Grammar & Structure"],
         summary: "Sertifikasi kemahiran berbahasa Inggris resmi dari Language Center UNIKOM dengan skor total 437. Berlaku resmi untuk kebutuhan akademis dan profesional hingga November 2027.",
     },
@@ -128,16 +128,16 @@ function Lightbox({ cert, onClose, onPrev, onNext, hasPrev, hasNext, darkMode })
         >
             <div
                 className={`relative max-w-4xl w-full max-h-[92vh] rounded-3xl border overflow-hidden shadow-2xl flex flex-col transition-all ${
-                    darkMode ? 'bg-slate-900 border-slate-700/80 text-white' : 'bg-white border-slate-200 text-slate-900'
+                    darkMode ? 'bg-zinc-900 border-zinc-700/80 text-white' : 'bg-white border-slate-200 text-slate-900'
                 }`}
                 onClick={(e) => e.stopPropagation()}
             >
                 {/* Header Modal */}
                 <div className={`flex items-center justify-between px-5 sm:px-6 py-4 border-b shrink-0 ${
-                    darkMode ? 'border-slate-800 bg-slate-950/70' : 'border-slate-200 bg-slate-50'
+                    darkMode ? 'border-zinc-800 bg-zinc-950/70' : 'border-slate-200 bg-slate-50'
                 }`}>
                     <div className="flex items-center gap-3 min-w-0">
-                        <div className="w-10 h-10 rounded-xl bg-amber-500/15 text-amber-400 flex items-center justify-center shrink-0 border border-amber-500/20">
+                        <div className="w-10 h-10 rounded-xl bg-red-500/15 text-red-500 flex items-center justify-center shrink-0 border border-red-500/20">
                             <ShieldCheck className="w-5 h-5" />
                         </div>
                         <div className="min-w-0">
@@ -151,7 +151,7 @@ function Lightbox({ cert, onClose, onPrev, onNext, hasPrev, hasNext, darkMode })
                         onClick={onClose}
                         className={`p-2 rounded-xl border transition-colors shrink-0 ml-3 ${
                             darkMode
-                                ? 'border-slate-700 text-slate-400 hover:text-white hover:bg-slate-800'
+                                ? 'border-zinc-700 text-slate-400 hover:text-white hover:bg-zinc-800'
                                 : 'border-slate-200 text-slate-600 hover:text-slate-900 hover:bg-slate-100'
                         }`}
                         aria-label="Tutup"
@@ -173,14 +173,14 @@ function Lightbox({ cert, onClose, onPrev, onNext, hasPrev, hasNext, darkMode })
 
                     {/* Meta Info Bar */}
                     <div className={`p-4 sm:p-5 rounded-2xl border flex flex-wrap items-center justify-between gap-4 ${
-                        darkMode ? 'bg-slate-950/50 border-slate-800' : 'bg-slate-50 border-slate-200'
+                        darkMode ? 'bg-zinc-950/50 border-zinc-800' : 'bg-slate-50 border-slate-200'
                     }`}>
                         <div>
                             <span className={`text-[11px] block font-mono uppercase tracking-wider ${darkMode ? 'text-slate-400' : 'text-slate-500'}`}>
                                 Nomor Registrasi / Kredensial:
                             </span>
                             <div className="flex items-center gap-2 mt-0.5">
-                                <span className="font-mono text-xs sm:text-sm font-bold text-amber-400">
+                                <span className="font-mono text-xs sm:text-sm font-bold text-red-600 dark:text-red-400">
                                     {cert.credentialId}
                                 </span>
                                 <button
@@ -188,8 +188,8 @@ function Lightbox({ cert, onClose, onPrev, onNext, hasPrev, hasNext, darkMode })
                                     title="Salin ID"
                                     className={`p-1 rounded-md text-xs border transition-all ${
                                         copied
-                                            ? 'bg-emerald-500/20 text-emerald-400 border-emerald-500/40'
-                                            : darkMode ? 'bg-slate-800 border-slate-700 text-slate-300' : 'bg-white border-slate-200 text-slate-700'
+                                            ? 'bg-rose-950/40 text-rose-300 border-rose-700/50'
+                                            : darkMode ? 'bg-zinc-800 border-zinc-700 text-slate-300' : 'bg-white border-slate-200 text-slate-700'
                                     }`}
                                 >
                                     {copied ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
@@ -208,7 +208,7 @@ function Lightbox({ cert, onClose, onPrev, onNext, hasPrev, hasNext, darkMode })
                                 href={cert.pdf}
                                 target="_blank"
                                 rel="noreferrer"
-                                className="px-4 py-2 rounded-xl text-xs font-bold text-white bg-indigo-600 hover:bg-indigo-500 transition-colors flex items-center gap-1.5 shadow-md shadow-indigo-500/25"
+                                className="px-4 py-2 rounded-xl text-xs font-bold text-white bg-red-600 hover:bg-red-500 transition-colors flex items-center gap-1.5 shadow-md shadow-red-600/25"
                             >
                                 <ExternalLink className="w-3.5 h-3.5" />
                                 <span>Buka PDF Asli</span>
@@ -218,7 +218,7 @@ function Lightbox({ cert, onClose, onPrev, onNext, hasPrev, hasNext, darkMode })
                                 download
                                 className={`px-4 py-2 rounded-xl text-xs font-bold border flex items-center gap-1.5 transition-colors ${
                                     darkMode
-                                        ? 'border-slate-700 bg-slate-800 text-slate-200 hover:text-white'
+                                        ? 'border-zinc-700 bg-zinc-800 text-slate-200 hover:text-white'
                                         : 'border-slate-300 bg-white text-slate-700 hover:bg-slate-50'
                                 }`}
                             >
@@ -235,14 +235,14 @@ function Lightbox({ cert, onClose, onPrev, onNext, hasPrev, hasNext, darkMode })
 
                 {/* Footer Navigation */}
                 <div className={`px-6 py-3 border-t flex items-center justify-between shrink-0 ${
-                    darkMode ? 'border-slate-800 bg-slate-950/60' : 'border-slate-200 bg-slate-50'
+                    darkMode ? 'border-zinc-800 bg-zinc-950/60' : 'border-slate-200 bg-slate-50'
                 }`}>
                     <div className="flex items-center gap-2">
                         {hasPrev && (
                             <button
                                 onClick={onPrev}
                                 className={`px-3 py-1.5 rounded-xl text-xs font-semibold border flex items-center gap-1 transition-all ${
-                                    darkMode ? 'border-slate-700 bg-slate-800 text-slate-300 hover:text-white' : 'border-slate-200 bg-white text-slate-700'
+                                    darkMode ? 'border-zinc-700 bg-zinc-800 text-slate-300 hover:text-white' : 'border-slate-200 bg-white text-slate-700'
                                 }`}
                             >
                                 <ChevronLeft className="w-4 h-4" />
@@ -253,7 +253,7 @@ function Lightbox({ cert, onClose, onPrev, onNext, hasPrev, hasNext, darkMode })
                             <button
                                 onClick={onNext}
                                 className={`px-3 py-1.5 rounded-xl text-xs font-semibold border flex items-center gap-1 transition-all ${
-                                    darkMode ? 'border-slate-700 bg-slate-800 text-slate-300 hover:text-white' : 'border-slate-200 bg-white text-slate-700'
+                                    darkMode ? 'border-zinc-700 bg-zinc-800 text-slate-300 hover:text-white' : 'border-slate-200 bg-white text-slate-700'
                                 }`}
                             >
                                 <span>Selanjutnya</span>
@@ -265,7 +265,7 @@ function Lightbox({ cert, onClose, onPrev, onNext, hasPrev, hasNext, darkMode })
                     <button
                         onClick={onClose}
                         className={`px-4 py-1.5 rounded-xl text-xs font-semibold border ${
-                            darkMode ? 'border-slate-700 text-slate-300 hover:text-white' : 'border-slate-200 text-slate-600 hover:text-slate-900'
+                            darkMode ? 'border-zinc-700 text-slate-300 hover:text-white' : 'border-slate-200 text-slate-600 hover:text-slate-900'
                         }`}
                     >
                         Tutup
@@ -298,13 +298,13 @@ export default function Certificates({ darkMode }) {
                 {/* Header Section */}
                 <div className="text-center max-w-3xl mx-auto mb-10">
                     <div className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold mb-3 backdrop-blur-md ${
-                        darkMode ? 'bg-amber-500/10 border border-amber-500/20 text-amber-400' : 'bg-amber-50 border border-amber-200 text-amber-700 shadow-sm'
+                        darkMode ? 'bg-red-500/10 border border-red-500/20 text-red-400' : 'bg-red-50 border border-red-200 text-red-700 shadow-sm'
                     }`}>
                         <Award className="w-3.5 h-3.5" />
                         <span>KREDENSIAL &amp; SERTIFIKASI PROFESIONAL</span>
                     </div>
                     <h2 className={`text-3xl sm:text-4xl font-extrabold tracking-tight mb-4 ${
-                        darkMode ? 'text-white' : 'bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-800 bg-clip-text text-transparent'
+                        darkMode ? 'text-white' : 'bg-gradient-to-r from-slate-900 via-red-950 to-slate-800 bg-clip-text text-transparent'
                     }`}>
                         Sertifikasi Kompetensi &amp; Pengakuan Resmi
                     </h2>
@@ -321,10 +321,10 @@ export default function Certificates({ darkMode }) {
                             onClick={() => setSelectedTab(tab.id)}
                             className={`px-4.5 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-200 active:scale-95 ${
                                 selectedTab === tab.id
-                                    ? 'bg-gradient-to-r from-indigo-600 to-sky-500 text-white shadow-md shadow-indigo-500/25'
+                                    ? 'bg-gradient-to-r from-red-600 to-rose-600 text-white shadow-md shadow-red-600/25'
                                     : darkMode
-                                    ? 'bg-slate-900/60 text-slate-400 hover:text-white border border-slate-800'
-                                    : 'bg-white/90 text-slate-700 hover:text-slate-900 border border-slate-200/90 shadow-sm hover:border-indigo-300'
+                                    ? 'bg-zinc-900/60 text-slate-400 hover:text-white border border-zinc-800'
+                                    : 'bg-white/90 text-slate-700 hover:text-slate-900 border border-slate-200/90 shadow-sm hover:border-red-300'
                             }`}
                         >
                             {tab.label}
@@ -342,8 +342,8 @@ export default function Certificates({ darkMode }) {
                                 onClick={() => setLightboxIndex(originalIndex)}
                                 className={`group relative rounded-3xl border overflow-hidden transition-all duration-300 hover:-translate-y-1.5 cursor-pointer flex flex-col justify-between ${
                                     darkMode
-                                        ? `bg-slate-900/50 border-slate-800/80 ${cert.borderColor} shadow-lg shadow-black/20 hover:shadow-indigo-500/10`
-                                        : `bg-white/90 backdrop-blur-md border-slate-200/90 ${cert.borderColor} shadow-[0_4px_24px_rgba(99,102,241,0.06)] hover:shadow-[0_16px_36px_rgba(99,102,241,0.15)]`
+                                        ? `bg-zinc-900/50 border-zinc-800/80 ${cert.borderColor} shadow-lg shadow-black/20 hover:shadow-red-500/10`
+                                        : `bg-white/90 backdrop-blur-md border-slate-200/90 ${cert.borderColor} shadow-[0_4px_24px_rgba(220,38,38,0.04)] hover:shadow-[0_16px_36px_rgba(220,38,38,0.12)]`
                                 }`}
                                 style={{
                                     boxShadow: darkMode
@@ -375,9 +375,9 @@ export default function Certificates({ darkMode }) {
                                         </div>
 
                                         {/* Hover Zoom Indicator */}
-                                        <div className="absolute inset-0 bg-indigo-950/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-xs">
-                                            <div className="px-3.5 py-1.5 rounded-xl bg-white/90 text-indigo-900 text-xs font-bold flex items-center gap-1.5 shadow-lg">
-                                                <ZoomIn className="w-3.5 h-3.5 text-indigo-600" />
+                                        <div className="absolute inset-0 bg-red-950/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-xs">
+                                            <div className="px-3.5 py-1.5 rounded-xl bg-white/95 text-red-900 text-xs font-bold flex items-center gap-1.5 shadow-lg">
+                                                <ZoomIn className="w-3.5 h-3.5 text-red-600" />
                                                 <span>Buka Kredensial</span>
                                             </div>
                                         </div>
@@ -385,12 +385,12 @@ export default function Certificates({ darkMode }) {
 
                                     {/* Content Info */}
                                     <div className="p-5 sm:p-6">
-                                        <h3 className={`text-base sm:text-lg font-bold tracking-tight mb-1.5 line-clamp-2 group-hover:text-indigo-400 transition-colors ${
+                                        <h3 className={`text-base sm:text-lg font-bold tracking-tight mb-1.5 line-clamp-2 group-hover:text-red-600 dark:group-hover:text-red-400 transition-colors ${
                                             darkMode ? 'text-white' : 'text-slate-900'
                                         }`}>
                                             {cert.title}
                                         </h3>
-                                        <p className={`text-xs mb-3 font-medium ${darkMode ? 'text-indigo-300/80' : 'text-indigo-600'}`}>
+                                        <p className={`text-xs mb-3 font-medium ${darkMode ? 'text-red-300/80' : 'text-red-600'}`}>
                                             {cert.issuer} &bull; <span className="font-mono">{cert.year}</span>
                                         </p>
 
@@ -406,7 +406,7 @@ export default function Certificates({ darkMode }) {
                                                 <span
                                                     key={sIdx}
                                                     className={`px-2 py-0.5 rounded-md text-[10px] font-medium ${
-                                                        darkMode ? 'bg-slate-800/80 text-slate-300 border border-slate-700/60' : 'bg-slate-100 text-slate-700'
+                                                        darkMode ? 'bg-zinc-800/80 text-slate-300 border border-zinc-700/60' : 'bg-slate-100 text-slate-700'
                                                     }`}
                                                 >
                                                     {skill}
@@ -425,11 +425,11 @@ export default function Certificates({ darkMode }) {
 
                                 {/* Card Footer: Credential ID + Preview CTA */}
                                 <div className={`px-5 sm:px-6 py-3 border-t flex items-center justify-between ${
-                                    darkMode ? 'border-slate-800/80 bg-slate-950/40' : 'border-slate-100 bg-slate-50/70'
+                                    darkMode ? 'border-zinc-800/80 bg-zinc-950/40' : 'border-slate-100 bg-slate-50/70'
                                 }`}>
                                     <div className="flex items-center gap-1.5 min-w-0">
                                         <span className={`text-[10px] font-mono shrink-0 ${darkMode ? 'text-slate-500' : 'text-slate-400'}`}>ID:</span>
-                                        <span className="font-mono text-[11px] font-semibold text-amber-400 truncate max-w-[130px]" title={cert.credentialId}>
+                                        <span className="font-mono text-[11px] font-semibold text-red-600 dark:text-red-400 truncate max-w-[130px]" title={cert.credentialId}>
                                             {cert.credentialId}
                                         </span>
                                         <button
@@ -437,7 +437,7 @@ export default function Certificates({ darkMode }) {
                                             title="Salin ID Kredensial"
                                             className={`p-1 rounded-md transition-all shrink-0 ${
                                                 copiedId === cert.id
-                                                    ? 'text-emerald-400'
+                                                    ? 'text-rose-400'
                                                     : darkMode ? 'text-slate-500 hover:text-slate-200' : 'text-slate-400 hover:text-slate-700'
                                             }`}
                                         >
@@ -447,7 +447,7 @@ export default function Certificates({ darkMode }) {
 
                                     <button
                                         onClick={() => setLightboxIndex(originalIndex)}
-                                        className="text-xs font-bold text-indigo-400 group-hover:text-indigo-300 flex items-center gap-1 transition-colors shrink-0"
+                                        className="text-xs font-bold text-red-600 dark:text-red-400 group-hover:text-red-500 flex items-center gap-1 transition-colors shrink-0"
                                     >
                                         <ZoomIn className="w-3.5 h-3.5" />
                                         <span>Lihat</span>

@@ -120,11 +120,11 @@ export default function ThreeBackground({ darkMode }) {
                     const dist = Math.sqrt(dx * dx + dy * dy);
 
                     if (dist < maxDist) {
-                        const lineAlpha = (1 - dist / maxDist) * Math.min(projected[i].alpha, projected[j].alpha) * 0.45;
+                        const lineAlpha = (1 - dist / maxDist) * Math.min(projected[i].alpha, projected[j].alpha) * 0.4;
                         if (darkMode) {
-                            ctx.strokeStyle = `rgba(99, 102, 241, ${lineAlpha})`;
+                            ctx.strokeStyle = `rgba(239, 68, 68, ${lineAlpha * 0.4})`;
                         } else {
-                            ctx.strokeStyle = `rgba(79, 70, 229, ${lineAlpha * 0.7})`;
+                            ctx.strokeStyle = `rgba(220, 38, 38, ${lineAlpha * 0.3})`;
                         }
                         ctx.beginPath();
                         ctx.moveTo(projected[i].x, projected[i].y);
@@ -140,13 +140,17 @@ export default function ThreeBackground({ darkMode }) {
                 ctx.beginPath();
                 ctx.arc(pt.x, pt.y, Math.max(0.8, pt.radius), 0, Math.PI * 2);
                 if (darkMode) {
-                    ctx.fillStyle = i % 2 === 0
-                        ? `rgba(56, 189, 248, ${pt.alpha})`
-                        : `rgba(129, 140, 248, ${pt.alpha})`;
+                    ctx.fillStyle = i % 3 === 0
+                        ? `rgba(239, 68, 68, ${pt.alpha * 0.7})`
+                        : i % 3 === 1
+                        ? `rgba(255, 255, 255, ${pt.alpha * 0.6})`
+                        : `rgba(245, 158, 11, ${pt.alpha * 0.65})`;
                 } else {
-                    ctx.fillStyle = i % 2 === 0
-                        ? `rgba(14, 165, 233, ${pt.alpha * 0.8})`
-                        : `rgba(99, 102, 241, ${pt.alpha * 0.8})`;
+                    ctx.fillStyle = i % 3 === 0
+                        ? `rgba(220, 38, 38, ${pt.alpha * 0.6})`
+                        : i % 3 === 1
+                        ? `rgba(185, 28, 28, ${pt.alpha * 0.4})`
+                        : `rgba(217, 119, 6, ${pt.alpha * 0.55})`;
                 }
                 ctx.fill();
             }

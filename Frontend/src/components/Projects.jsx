@@ -20,14 +20,12 @@ export default function Projects({ darkMode }) {
                     <p className="text-xs uppercase font-bold tracking-[0.25em] text-neutral-500 mb-2.5">
                         SELECTED WORK
                     </p>
-                    <h2 className={`text-4xl sm:text-5xl font-extrabold tracking-tight mb-3.5 ${
-                        darkMode ? 'text-white' : 'text-slate-900'
-                    }`}>
+                    <h2 className={`text-4xl sm:text-5xl font-extrabold tracking-tight mb-3.5 ${darkMode ? 'text-white' : 'text-slate-900'
+                        }`}>
                         Featured Projects.
                     </h2>
-                    <p className={`text-sm sm:text-base leading-relaxed max-w-xl ${
-                        darkMode ? 'text-neutral-400' : 'text-slate-600'
-                    }`}>
+                    <p className={`text-sm sm:text-base leading-relaxed max-w-xl ${darkMode ? 'text-neutral-400' : 'text-slate-600'
+                        }`}>
                         Explore my software development and data analytics work. Click a folder to see the project details.
                     </p>
                 </div>
@@ -38,15 +36,12 @@ export default function Projects({ darkMode }) {
                         <button
                             key={cat.id}
                             onClick={() => setActiveTab(cat.id)}
-                            className={`px-4 py-1.5 rounded-full text-xs font-semibold transition-all duration-200 active:scale-95 ${
-                                activeTab === cat.id
-                                    ? darkMode
-                                        ? 'bg-white text-slate-950 font-bold shadow-md shadow-white/10'
-                                        : 'bg-slate-900 text-white font-bold shadow-md'
+                            className={`px-4 py-1.5 rounded-full text-xs font-semibold transition-all duration-200 active:scale-95 ${activeTab === cat.id
+                                    ? 'bg-red-600 text-white font-bold shadow-md shadow-red-600/20'
                                     : darkMode
-                                    ? 'bg-slate-900/80 text-slate-400 hover:text-white border border-slate-800'
-                                    : 'bg-white text-slate-600 hover:text-slate-900 border border-slate-200 shadow-sm'
-                            }`}
+                                        ? 'bg-zinc-900/80 text-slate-400 hover:text-white border border-zinc-800'
+                                        : 'bg-white text-slate-600 hover:text-slate-900 border border-slate-200 shadow-sm'
+                                }`}
                         >
                             {cat.label}
                         </button>

@@ -16,7 +16,7 @@ export default function App() {
     const [darkMode, setDarkMode] = useState(() => {
         const saved = localStorage.getItem('theme');
         if (saved) return saved === 'dark';
-        return true;
+        return false;
     });
 
     const [isCvOpen, setIsCvOpen] = useState(false);
@@ -33,19 +33,19 @@ export default function App() {
     }, [darkMode]);
 
     return (
-        <div className={`relative min-h-screen transition-colors duration-300 font-sans selection:bg-indigo-500 selection:text-white ${
-            darkMode ? 'bg-[#090d16] text-slate-100' : 'bg-[#f8fafc] text-slate-900'
+        <div className={`relative min-h-screen transition-colors duration-300 font-sans selection:bg-red-600 selection:text-white ${
+            darkMode ? 'bg-[#0b0c10] text-slate-100' : 'bg-white text-slate-900'
         }`}>
-            {/* Ambient Background Meshes for Light Mode */}
+            {/* Ambient Background Meshes for Light Mode (Merah Putih & Putih Gold Gradasi) */}
             {!darkMode && (
                 <div className="fixed inset-0 pointer-events-none overflow-hidden -z-10">
-                    <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[950px] h-[550px] bg-gradient-to-b from-indigo-200/35 via-sky-100/30 to-transparent rounded-full blur-3xl opacity-80" />
-                    <div className="absolute top-[30%] -left-32 w-[600px] h-[600px] bg-gradient-to-tr from-sky-200/25 to-indigo-100/20 rounded-full blur-3xl opacity-70" />
-                    <div className="absolute top-[60%] -right-32 w-[650px] h-[650px] bg-gradient-to-bl from-purple-200/25 via-indigo-100/20 to-transparent rounded-full blur-3xl opacity-70" />
+                    <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[950px] h-[550px] bg-gradient-to-b from-red-100/35 via-amber-50/30 to-transparent rounded-full blur-3xl opacity-70" />
+                    <div className="absolute top-[30%] -left-32 w-[600px] h-[600px] bg-gradient-to-tr from-amber-100/30 via-rose-50/20 to-transparent rounded-full blur-3xl opacity-60" />
+                    <div className="absolute top-[60%] -right-32 w-[650px] h-[650px] bg-gradient-to-bl from-red-100/25 via-amber-50/20 to-transparent rounded-full blur-3xl opacity-60" />
                     <div
-                        className="absolute inset-0 opacity-[0.03]"
+                        className="absolute inset-0 opacity-[0.02]"
                         style={{
-                            backgroundImage: 'radial-gradient(#4f46e5 1px, transparent 1px)',
+                            backgroundImage: 'radial-gradient(#dc2626 1px, transparent 1px)',
                             backgroundSize: '24px 24px',
                         }}
                     />

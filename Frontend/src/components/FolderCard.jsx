@@ -37,42 +37,42 @@ function FolderInsideCards({ project, darkMode }) {
                     <div>
                         <div className="flex items-center justify-between mb-1.5 pb-1 border-b border-slate-800">
                             <div className="flex items-center gap-1">
-                                <span className="w-1.5 h-1.5 rounded-full bg-rose-500" />
-                                <span className="w-1.5 h-1.5 rounded-full bg-amber-500" />
-                                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                                <span className="w-1.5 h-1.5 rounded-full bg-[#ff5f56]" />
+                                <span className="w-1.5 h-1.5 rounded-full bg-[#ffbd2e]" />
+                                <span className="w-1.5 h-1.5 rounded-full bg-[#27c93f]" />
                             </div>
                             <span className="text-[9px] font-mono text-slate-400">FastAPI</span>
                         </div>
-                        <div className="text-[10px] font-mono text-indigo-300 font-semibold truncate">
+                        <div className="text-[10px] font-mono text-red-400 font-semibold truncate">
                             POST /verify/face
                         </div>
                         <div className="text-[9px] font-mono text-slate-400 mt-1">
                             &gt; Latency: &lt;300ms
                         </div>
                     </div>
-                    <div className="flex items-center justify-between pt-1 border-t border-slate-800/80 text-[8px] font-mono text-emerald-400">
+                    <div className="flex items-center justify-between pt-1 border-t border-slate-800/80 text-[8px] font-mono text-rose-400">
                         <span>● YOLOv8 Active</span>
                         <span>RAM Cache</span>
                     </div>
                 </div>
 
                 {/* Center Card: Face Recognition Camera Viewport */}
-                <div className="folder-card-item folder-card-center bg-slate-950 border border-indigo-500/40 rounded-xl p-2.5 text-white shadow-2xl flex flex-col justify-between">
+                <div className="folder-card-item folder-card-center bg-slate-950 border border-red-500/40 rounded-xl p-2.5 text-white shadow-2xl flex flex-col justify-between">
                     <div className="flex items-center justify-between border-b border-slate-800 pb-1">
                         <div className="flex items-center gap-1">
-                            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                            <span className="w-2 h-2 rounded-full bg-rose-400 animate-pulse" />
                             <span className="text-[9px] font-bold text-slate-200">KIOSK VERIFY</span>
                         </div>
-                        <span className="text-[8px] px-1.5 py-0.2 rounded bg-indigo-500/20 text-indigo-300 font-mono">RSU Pindad</span>
+                        <span className="text-[8px] px-1.5 py-0.2 rounded bg-red-500/20 text-red-300 font-mono">RSU Pindad</span>
                     </div>
 
                     {/* Camera simulation viewport with face target */}
-                    <div className="my-1.5 py-2 px-3 rounded-lg bg-slate-900/90 border border-dashed border-emerald-500/40 relative flex flex-col items-center justify-center">
-                        <div className="w-9 h-9 rounded-full border-2 border-emerald-400/80 flex items-center justify-center relative">
-                            <ScanFace className="w-5 h-5 text-emerald-400" />
-                            <div className="absolute inset-0 border border-emerald-400/40 rounded-full animate-ping opacity-30" />
+                    <div className="my-1.5 py-2 px-3 rounded-lg bg-slate-900/90 border border-dashed border-rose-500/40 relative flex flex-col items-center justify-center">
+                        <div className="w-9 h-9 rounded-full border-2 border-rose-400/80 flex items-center justify-center relative">
+                            <ScanFace className="w-5 h-5 text-rose-400" />
+                            <div className="absolute inset-0 border border-rose-400/40 rounded-full animate-ping opacity-30" />
                         </div>
-                        <span className="text-[9px] font-bold text-emerald-400 mt-1 font-mono tracking-wider">
+                        <span className="text-[9px] font-bold text-rose-400 mt-1 font-mono tracking-wider">
                             MATCH: 98.4%
                         </span>
                         <span className="text-[8px] text-slate-400">Pasien Terverifikasi</span>
@@ -87,16 +87,16 @@ function FolderInsideCards({ project, darkMode }) {
                 <div className="folder-card-item folder-card-right bg-slate-900 border border-slate-700/80 rounded-xl p-2.5 text-white shadow-xl flex flex-col justify-between">
                     <div>
                         <div className="flex items-center justify-between mb-1 pb-1 border-b border-slate-800">
-                            <span className="text-[9px] font-bold text-sky-400">Embedding</span>
+                            <span className="text-[9px] font-bold text-red-400">Embedding</span>
                             <span className="text-[8px] text-slate-400 font-mono">200 Frames</span>
                         </div>
                         <div className="h-9 w-full bg-slate-950/80 rounded p-1 flex items-end gap-0.5 justify-around">
-                            <div className="w-1.5 bg-indigo-500 rounded-t h-[40%]" />
-                            <div className="w-1.5 bg-indigo-400 rounded-t h-[75%]" />
-                            <div className="w-1.5 bg-emerald-400 rounded-t h-[95%]" />
-                            <div className="w-1.5 bg-indigo-400 rounded-t h-[60%]" />
-                            <div className="w-1.5 bg-sky-400 rounded-t h-[85%]" />
-                            <div className="w-1.5 bg-indigo-500 rounded-t h-[50%]" />
+                            <div className="w-1.5 bg-red-600 rounded-t h-[40%]" />
+                            <div className="w-1.5 bg-red-500 rounded-t h-[75%]" />
+                            <div className="w-1.5 bg-rose-400 rounded-t h-[95%]" />
+                            <div className="w-1.5 bg-red-500 rounded-t h-[60%]" />
+                            <div className="w-1.5 bg-rose-300 rounded-t h-[85%]" />
+                            <div className="w-1.5 bg-red-600 rounded-t h-[50%]" />
                         </div>
                     </div>
                     <div className="text-[8px] font-mono text-slate-400 text-right">
@@ -115,11 +115,11 @@ function FolderInsideCards({ project, darkMode }) {
                 <div className="folder-card-item folder-card-left bg-slate-900 border border-slate-700/80 rounded-xl overflow-hidden shadow-xl flex flex-col">
                     <div className="px-2 py-1 bg-slate-950/90 border-b border-slate-800 flex items-center justify-between">
                         <div className="flex items-center gap-1">
-                            <span className="w-1.5 h-1.5 rounded-full bg-rose-500" />
-                            <span className="w-1.5 h-1.5 rounded-full bg-amber-500" />
-                            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                            <span className="w-1.5 h-1.5 rounded-full bg-[#ff5f56]" />
+                            <span className="w-1.5 h-1.5 rounded-full bg-[#ffbd2e]" />
+                            <span className="w-1.5 h-1.5 rounded-full bg-[#27c93f]" />
                         </div>
-                        <span className="text-[8px] font-mono text-emerald-400 font-semibold truncate">Peminjaman Tools</span>
+                        <span className="text-[8px] font-mono text-rose-400 font-semibold truncate">Peminjaman Tools</span>
                     </div>
                     <div className="relative flex-1 bg-slate-950 overflow-hidden">
                         <img 
@@ -135,13 +135,13 @@ function FolderInsideCards({ project, darkMode }) {
                 </div>
 
                 {/* Center Card: Dashboard Utama Screenshot (Hero) */}
-                <div className="folder-card-item folder-card-center bg-slate-950 border border-indigo-500/50 rounded-xl overflow-hidden shadow-2xl flex flex-col">
+                <div className="folder-card-item folder-card-center bg-slate-950 border border-red-500/40 rounded-xl overflow-hidden shadow-2xl flex flex-col">
                     <div className="px-2.5 py-1 bg-slate-900 border-b border-slate-800 flex items-center justify-between">
                         <div className="flex items-center gap-1.5">
-                            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                            <span className="w-2 h-2 rounded-full bg-rose-400 animate-pulse" />
                             <span className="text-[9px] font-extrabold text-white tracking-wide">PT. PINDAD</span>
                         </div>
-                        <span className="text-[8px] px-1.5 py-0.2 rounded bg-emerald-500/20 text-emerald-300 font-mono">
+                        <span className="text-[8px] px-1.5 py-0.2 rounded bg-rose-950/40 text-rose-300 font-mono">
                             TI Warehouse
                         </span>
                     </div>
@@ -161,8 +161,8 @@ function FolderInsideCards({ project, darkMode }) {
                 {/* Right Card: Laporan Inventaris Gudang Screenshot */}
                 <div className="folder-card-item folder-card-right bg-slate-900 border border-slate-700/80 rounded-xl overflow-hidden shadow-xl flex flex-col">
                     <div className="px-2 py-1 bg-slate-950/90 border-b border-slate-800 flex items-center justify-between">
-                        <span className="text-[8px] font-mono text-sky-400 font-semibold truncate">Laporan Gudang</span>
-                        <span className="text-[7.5px] px-1 rounded bg-emerald-600/30 text-emerald-300 font-bold">Excel</span>
+                        <span className="text-[8px] font-mono text-red-400 font-semibold truncate">Laporan Gudang</span>
+                        <span className="text-[7.5px] px-1 rounded bg-[#107c41]/25 text-[#107c41] dark:text-[#22a559] border border-[#107c41]/40 font-bold">Excel</span>
                     </div>
                     <div className="relative flex-1 bg-slate-950 overflow-hidden">
                         <img 
@@ -171,7 +171,7 @@ function FolderInsideCards({ project, darkMode }) {
                             className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-300" 
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent pointer-events-none" />
-                        <span className="absolute bottom-1 right-1.5 text-[7.5px] font-mono text-emerald-400 bg-slate-900/80 px-1 rounded">
+                        <span className="absolute bottom-1 right-1.5 text-[7.5px] font-mono text-rose-400 bg-slate-900/80 px-1 rounded">
                             Export Ready
                         </span>
                     </div>
@@ -187,11 +187,11 @@ function FolderInsideCards({ project, darkMode }) {
             <div className="folder-card-item folder-card-left bg-slate-900 border border-slate-700/80 rounded-xl overflow-hidden shadow-xl flex flex-col">
                 <div className="px-2 py-1 bg-slate-950/90 border-b border-slate-800 flex items-center justify-between">
                     <div className="flex items-center gap-1">
-                        <span className="w-1.5 h-1.5 rounded-full bg-rose-500" />
-                        <span className="w-1.5 h-1.5 rounded-full bg-amber-500" />
-                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#ff5f56]" />
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#ffbd2e]" />
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#27c93f]" />
                     </div>
-                    <span className="text-[8px] font-mono text-emerald-400 font-bold truncate">100% Valid</span>
+                    <span className="text-[8px] font-mono text-rose-400 font-bold truncate">100% Valid</span>
                 </div>
                 <div className="relative flex-1 bg-slate-950 overflow-hidden">
                     <img 
@@ -200,7 +200,7 @@ function FolderInsideCards({ project, darkMode }) {
                         className="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-300" 
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent pointer-events-none" />
-                    <span className="absolute bottom-1 left-1.5 text-[7.5px] font-mono text-emerald-300 bg-slate-900/90 px-1 rounded border border-emerald-500/30">
+                    <span className="absolute bottom-1 left-1.5 text-[7.5px] font-mono text-rose-300 bg-slate-900/90 px-1 rounded border border-rose-800/40">
                         Power Query ETL
                     </span>
                 </div>
@@ -269,8 +269,8 @@ export default function FolderCard({ project, onClick, darkMode }) {
             onClick={() => onClick(project)}
             className={`group relative rounded-[28px] border transition-all duration-300 flex flex-col justify-between cursor-pointer p-6 sm:p-8 select-none ${
                 darkMode
-                    ? 'bg-[#0d1017]/90 border-slate-800/90 hover:border-indigo-500/40 hover:bg-[#10141f] shadow-[0_4px_30px_rgba(0,0,0,0.4)] hover:shadow-indigo-500/10'
-                    : 'bg-white/95 border-slate-200/90 hover:border-indigo-300/80 hover:bg-slate-50/90 shadow-[0_4px_24px_rgba(99,102,241,0.06)] hover:shadow-[0_16px_36px_rgba(99,102,241,0.12)]'
+                    ? 'bg-[#121318]/90 border-zinc-800/90 hover:border-red-500/40 hover:bg-[#15161d] shadow-[0_4px_30px_rgba(0,0,0,0.4)] hover:shadow-red-500/10'
+                    : 'bg-white/95 border-slate-200/90 hover:border-red-300/80 hover:bg-red-50/20 shadow-[0_4px_24px_rgba(220,38,38,0.04)] hover:shadow-[0_16px_36px_rgba(220,38,38,0.1)]'
             }`}
         >
             {/* Quick action icons on top-right */}
@@ -283,7 +283,7 @@ export default function FolderCard({ project, onClick, darkMode }) {
                         onClick={(e) => e.stopPropagation()}
                         className={`p-2 rounded-xl transition-all ${
                             darkMode
-                                ? 'bg-slate-800/80 hover:bg-slate-700 text-slate-300 hover:text-white border border-slate-700/60'
+                                ? 'bg-zinc-800/80 hover:bg-zinc-700 text-slate-300 hover:text-white border border-zinc-700/60'
                                 : 'bg-slate-100 hover:bg-slate-200 text-slate-600 hover:text-slate-900 border border-slate-200'
                         }`}
                         title="Buka Repositori GitHub"
@@ -299,8 +299,8 @@ export default function FolderCard({ project, onClick, darkMode }) {
                         onClick={(e) => e.stopPropagation()}
                         className={`p-2 rounded-xl transition-all ${
                             darkMode
-                                ? 'bg-indigo-500/10 hover:bg-indigo-500/20 text-indigo-300 border border-indigo-500/30'
-                                : 'bg-indigo-50 hover:bg-indigo-100 text-indigo-700 border border-indigo-200'
+                                ? 'bg-red-500/10 hover:bg-red-500/20 text-red-300 border border-red-500/30'
+                                : 'bg-red-50 hover:bg-red-100 text-red-700 border border-red-200'
                         }`}
                         title="Buka Dokumen PDF Resmi"
                     >
@@ -371,7 +371,7 @@ export default function FolderCard({ project, onClick, darkMode }) {
             {/* Folder Information & Action Text below */}
             <div className="mt-4 text-center flex flex-col items-center">
                 {/* Title */}
-                <h3 className={`text-xl sm:text-2xl font-bold tracking-tight mb-1.5 transition-colors group-hover:text-indigo-400 ${
+                <h3 className={`text-xl sm:text-2xl font-bold tracking-tight mb-1.5 transition-colors group-hover:text-red-600 dark:group-hover:text-red-400 ${
                     darkMode ? 'text-white' : 'text-slate-900'
                 }`}>
                     {project.folderTitle || project.title}
@@ -389,14 +389,14 @@ export default function FolderCard({ project, onClick, darkMode }) {
                     onClick={isPdfAction && project.docUrl ? handleDocumentClick : () => onClick(project)}
                     className={`inline-flex items-center gap-1.5 text-xs font-medium transition-all duration-200 group-hover:translate-x-0.5 ${
                         darkMode 
-                            ? 'text-slate-400 group-hover:text-indigo-300' 
-                            : 'text-slate-500 group-hover:text-indigo-600'
+                            ? 'text-slate-400 group-hover:text-red-300' 
+                            : 'text-slate-500 group-hover:text-red-600'
                     }`}
                 >
                     {isPdfAction ? (
-                        <FileText className="w-3.5 h-3.5 text-indigo-400" />
+                        <FileText className="w-3.5 h-3.5 text-red-500" />
                     ) : (
-                        <FolderOpen className="w-3.5 h-3.5 text-indigo-400" />
+                        <FolderOpen className="w-3.5 h-3.5 text-red-500" />
                     )}
                     <span>{project.actionText || "Click folder to explore"}</span>
                 </button>
